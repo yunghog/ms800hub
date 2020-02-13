@@ -1,0 +1,164 @@
+<?php  ?>
+
+<!doctype html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+		<link rel="stylesheet" type="text/css" href="assets/css/styles.css">
+		<link href="https://fonts.googleapis.com/css?family=Monoton&display=swap" rel="stylesheet">
+		<link href="https://fonts.googleapis.com/css?family=Lexend+Deca&display=swap" rel="stylesheet">
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+
+    <title>Club MS8</title>
+  </head>
+	<body background="assets/img/bg.jpg">
+		<header>
+			<nav class="navbar navbar-expand-lg navbar-dark bg-dark ">
+  <a class="navbar-brand" href="#"><img class="logo" src="assets/img/logo.png" alt="">		</a>
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+
+  <div class="collapse navbar-collapse" id="navbarSupportedContent">
+    <ul class="navbar-nav ml-auto" >
+      <li class="nav-item ">
+        <a class="nav-link" href="index.html">HOME <span class="sr-only">(current)</span></a>
+      </li>
+      <li class="nav-item active">
+        <a class="nav-link" href="event.html">EVENTS</a>
+      </li>
+			<li class="nav-item">
+        <a class="nav-link" href="#">GALLERY</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="blog.php">BLOG</a>
+      </li>
+			<li class="nav-item">
+        <a class="nav-link" href="register.html">REGISTER</a>
+      </li>
+			<!-- <li class="nav-item">
+        <a class="nav-link" href="about">ABOUT</a>
+      </li> -->
+      <li class="nav-item dropdown" >
+        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+          ABOUT
+        </a>
+        <div class="dropdown-menu" aria-labelledby="navbarDropdown" style="background-color:#353a40;">
+        <a class="nav-link" href="aboutus.html">ABOUT US</a>
+        <a class="nav-link" href="team.html">TEAM</a>
+          <div class="dropdown-divider"></div>
+        </div>
+      </li>
+      <!-- <li class="nav-item dropdown">
+        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+          Dropdown
+        </a>
+        <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+          <a class="dropdown-item" href="#">Action</a>
+          <a class="dropdown-item" href="#">Another action</a>
+          <div class="dropdown-divider"></div>
+          <a class="dropdown-item" href="#">Something else here</a>
+        </div>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link disabled" href="#" tabindex="-1" >Disabled</a>
+      </li> -->
+    </ul>
+
+  </div>
+</nav>
+		</header>
+<br>
+  <div class="content">
+
+    <div class="container-fluid">
+      <div class="row">
+        <div class="col-12">
+        <h1 class="big-text">EVENTS</h1>
+        <br>
+        <h2 class="tag">CLUTCH, SHIFT AND ACCELERATE</h2>
+      </div>
+      </div>
+      <br>
+      <div class="row">
+        <div class="col-12">
+          <p class="para-more" id="readmore">Activities of the  CLUB MS8 Sagar includes car meets,
+            road trips, hunt (hunting for the unique rides in the city).
+          </p>
+        </div>
+        </div>
+        <div class="row">
+          <div class="col-sm-12">
+            <h2 class="tag">Events in Sagar</h2>
+            <p class="para-more">
+              In the town of Sagar. All the events of the Club is carried out in presense of SAMNSADY.
+              As the Club is at initial stage we have very few members. We are trying to reach more and more people through
+              irl and social media. Till date we have not cunducted any meet. We hope our community will grow more!
+            </p>
+          </div>
+        </div>
+        <br>
+        <div class="row">
+          <div class="col-sm-12">
+            <h2 class="tag">Latest Events</h2>
+            <p class="para-more">
+              All the information and alerts regarding the meet ups,cruising will be posted in this page.
+              Cheers!!!
+            </p>
+          </div>
+        </div>
+        <br>
+        <div class="row">
+          <div class="col-12">
+            <h2 class="tag">Events by kerala homies !</h2>
+          </div>
+        </div>
+        <br>
+        <div class="row">
+          <div class="col-sm-6">
+            <div class="card border-dark" style="border:none;border-radius: 10px;" >
+              <iframe height="300px;" src="https://www.youtube.com/embed/pDT6yYm4-OI" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+              <div class="card-body" style="background-color:black;">
+                <h5 class="card-title para">Thrisur meet 2019</h5>
+                <p class="card-text"><span class="para">MS8
+                                      BROTHERHOOD
+                                      KL08 Thrisur dist Member
+                                      Club_MS8 TSR, Kerala, INDIA
+                                      </span></p>
+                <a href="https://www.youtube.com/watch?v=pDT6yYm4-OI&t=2s" class="btn btn-primary">More</a>
+              </div>
+            </div>
+          </div>
+          <div class="col-sm-6">
+            <div class="card border-dark" style="border:none;border-radius: 10px;" >
+              <iframe height="300px" src="https://www.youtube.com/embed/CrmutHczGSU" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+              <div class="card-body" style="background-color:black;">
+                <h5 class="card-title para">Celebration</h5>
+                <p class="card-text"><span class="para">Club MS8 50k insta Family celebration</span></p>
+                <a href="https://www.youtube.com/watch?v=pDT6yYm4-OI&t=2s" class="btn btn-primary">More</a>
+              </div>
+            </div>
+          </div>
+        </div>
+        </div>
+      </div>
+      <br><br>
+      <div class="row">
+        <div class="col-sm-12">
+
+        </div>
+      </div>
+      <br><br>
+    <div class="footer">
+      <p>© 2020 Copyright: ms800hub.rf.gd | by <a href="https://www.instagram.com/samartha__">Samartha</p></a>
+    </div>
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
+  </body>
+</html>
