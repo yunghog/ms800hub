@@ -21,6 +21,11 @@ header{
 .logo{
   height: 40px;
 }
+.no-margin{
+  padding: 0px;
+  left: 0;
+  margin-left:0px;
+}
 .nav-link{
     padding: 5px;
     font-family: 'Lexend Deca', sans-serif;
@@ -85,6 +90,14 @@ footer a:hover{
   font-size: 16px;
   color: #fff;
   padding: 10px;
+}
+.section-fluid{
+  background-color: #000000;
+}
+.quote{
+  font-size: 30px;
+  color: #00e4ff;
+  font-family: serif;
 }
 .socials a{
   font-family: 'Lexend Deca', sans-serif;
@@ -369,5 +382,35 @@ position: absolute;
   100% {
     padding-top: 0px;
     opacity: 1;
+  }
+}
+#car-front{
+  animation: fadeInright ease 5s;
+  animation-iteration-count: 1;
+  animation-fill-mode: forwards;
+}
+@keyframes fadeInright {
+  0% {
+    position: absolute;
+    left: -100px;
+  }
+  100% {
+    left: 0px;
+    position: relative;
+  }
+}
+#car-back{
+  animation: fadeInleft ease 5s;
+  animation-iteration-count: 1;
+  animation-fill-mode: forwards;
+}
+@keyframes fadeInleft {
+  0% {
+    position: absolute;
+    right: -100px;
+  }
+  100% {
+    right: 0px;
+    position: relative;
   }
 }

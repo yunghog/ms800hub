@@ -73,7 +73,37 @@
                   So as a tribute, to set a trend and craze as well as to persue our passion for this Legendary coupe we have come up with the
                   <b>Club MS8 Sagar</b>
                  </p>
-                   <p class="para-more" >
+              </div>
+            </div>
+          </div>
+        </section>
+        <section class="section-fluid">
+          <div class="container-fluid no-margin">
+            <div class="row">
+              <div class="col-2 no-margin">
+                <img id="car-front" src="assets/img/ms8f.png" alt="" width="100%">
+              </div>
+              <div class="col-8">
+                <h3 class="quote">“We have an emotional connection with the vehicle, but at some point of time, you have to take hard decisions,"</h3>
+                <h5 class="tag text-right">- Sir. C.V Raman</h5>
+                    <p class="para-more text-right">Executive director of engineering at Maruti Suzuki</p>
+              </div>
+              <div class="col-2 no-margin">
+                <img id="car-back" src="assets/img/ms8b.png" alt="" width="100%">
+              </div>
+            </div>
+          </div>
+        </section>
+        <section class="full-section"  id="fade">
+          <div class="container">
+            <div class="row" >
+              <div class="col-md-12">
+                <h2 class="tag">Mission</h2>
+              </div>
+            </div>
+            <div class="row">
+              <div class="col-md-8">
+                  <p class="para-more" >
                      We are 20yo car enthusiast. We're interested in cars since
                      childhood. There are many automobile clubs like JAWA Motorcycle
                      club, RX club, JEEP club... So being a car enthusiast we wanted
@@ -82,15 +112,17 @@
                      in the community and preserve the legend for future generation
                    </p>
               </div>
-              <div class="col-md-4">
-                <img src="" alt="">
+            </div>
+            <div class="row">
+              <div class="col-md-8">
+                <h3 class="tag">Our Social Media Handles</h3>
+                <ul class="list-more">
+                  <li><a href="https://www.instagram.com/clubms8/" target="_blank"><i class="fa fa-instagram"></i> Club MS8 Instagram </a></li>
+                  <li><a href="mailto:Clubms8sagar@gmail.com" target="_blank"><i class="fa fa-envelope"></i> Clubms8sagar@gmail.com </a></li>
+                </ul>
               </div>
             </div>
-            <h3 class="tag">Our Social Media Handles</h3>
-            <ul class="list-more">
-              <li><a href="https://www.instagram.com/clubms8/" target="_blank"><i class="fa fa-instagram"></i> Club MS8 Instagram </a></li>
-              <li><a href="mailto:Clubms8sagar@gmail.com" target="_blank"><i class="fa fa-envelope"></i> Clubms8sagar@gmail.com </a></li>
-            </ul>
+
           </div>
         </section>
       </div>
