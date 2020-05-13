@@ -11,6 +11,7 @@
 		<link href="https://fonts.googleapis.com/css?family=Lexend+Deca&display=swap" rel="stylesheet">
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="assets/css/bootstrap.min.css">
+    <link rel="icon" href="assets/img/favicon.png" sizes="16x16">
 
     <title>Club MS8</title>
   </head>
@@ -53,7 +54,7 @@
       <br><br>
     <?php include 'footer.php'; ?>
     <script type="text/javascript">
-      document.getElementById('index').classList.add('active');
+      document.getElementById('index').classList.add('active2');
     </script>
     <!-- Optional JavaScript -->
     <!-- jQuery first, then Popper.js, then Bootstrap JS -->
