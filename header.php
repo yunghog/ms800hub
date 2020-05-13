@@ -10,28 +10,28 @@
   <li class="nav-item" id="index">
     <a class="nav-link" href="index.php">HOME</a>
   </li>
-  <li class="nav-item dropdown" >
+  <li class="nav-item dropdown" id="about" >
     <a class="nav-link dropdown-toggle " href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
       ABOUT
     </a>
     <div class="dropdown-menu animate slideIn" aria-labelledby="navbarDropdown">
-    <a class="nav-link" href="aboutus.html">ABOUT US</a>
-    <a class="nav-link" href="team.html">TEAM</a>
+    <a class="nav-link" id="aboutus" href="aboutus.html">ABOUT US</a>
+    <a class="nav-link" href="team.html" id="team">TEAM</a>
     </div>
   </li>
-  <li class="nav-item">
+  <li class="nav-item " id="events">
     <a class="nav-link" href="event.html">EVENTS</a>
   </li>
-  <li class="nav-item">
+  <li class="nav-item" id="gallery">
     <a class="nav-link" href="#">GALLERY</a>
   </li>
-  <li class="nav-item">
+  <li class="nav-item" id="blog">
     <a class="nav-link" href="blog.php">BLOG</a>
   </li>
-  <li class="nav-item">
+  <li class="nav-item" id="register">
     <a class="nav-link" href="register.html">REGISTER</a>
   </li>
-  <li class="nav-item">
+  <li class="nav-item" id="login">
     <a class="nav-link" href="login.php">SIGN IN</a>
   </li>
   <!-- <li class="nav-item">
