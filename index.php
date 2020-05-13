@@ -71,7 +71,7 @@
             <div class="row">
               <div class="col-md-4">
                 <a href="about.php"><button class="btn btn-primary">read more</button></a>
-                  <button class="btn btn-outline-primary">read more</button>
+                  <button class="btn btn-outline-primary">signup</button>
               </div>
               <div class="col-md-2">
               </div>

@@ -13,6 +13,11 @@ body{
   background-color: #000000;
   }
 }
+header{
+  top: 0px;
+  left: 0px;
+  position: relative;
+}
 .logo{
   height: 40px;
 }
@@ -35,6 +40,9 @@ footer {
    font-size: 16px;
    padding-top: 10px;
 }
+.content{
+  height: 100%;
+}
 a{
   text-decoration: none !important;
 }
@@ -56,11 +64,20 @@ footer a:hover{
   text-decoration: none;
   font-weight: bolder;
 }
-.list{
+.list-more{
   font-family: 'Lexend Deca', sans-serif;
   font-size: 18px;
   color: white;
   text-decoration: none;
+  list-style: none;
+}
+.list-more a{
+  transition: 1s ease;
+}
+.list-more a:hover{
+  font-size: 20px;
+  font-weight: bolder;
+  color: white;
 }
 .para-more{
   text-align: justify;
@@ -112,8 +129,10 @@ footer a:hover{
 }
 .btn{
 text-transform: uppercase;
-font-size: 14px;
-font-family: "Lexend deca"
+font-size: 12px;
+font-family: "Lexend deca";
+min-width: 60px;
+max-width: 100px;
 }
 .btn-primary{
   border: 2px solid #00e4ff;
@@ -121,6 +140,7 @@ font-family: "Lexend deca"
   background-color: #00e4ff;
 }
 .btn-primary:hover{
+  border: 2px solid #00e4ff;
   color: #000000;
   background-color: #00e4ff;
   box-shadow: 0 0 15px #00e4ff;
@@ -131,7 +151,7 @@ font-family: "Lexend deca"
   color: #00e4ff;
 }
 .btn-outline-primary:hover{
-  border: 1px solid #00e4ff;
+  border: 2px solid #00e4ff;
   background-color: #000000;
   color: #00e4ff;
   box-shadow: 0 0 15px #00e4ff;
@@ -337,7 +357,7 @@ position: absolute;
   animation-name: slideIn;
 }
 #fade{
-  animation: fadeInAnimation ease 1s;
+  animation: fadeInAnimation ease 2s;
   animation-iteration-count: 1;
   animation-fill-mode: forwards;
 }

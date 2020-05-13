@@ -6,100 +6,101 @@
     <!-- Required meta tags -->
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-		<link rel="stylesheet" type="text/css" href="assets/css/styles.css">
-		<link href="https://fonts.googleapis.com/css?family=Monoton&display=swap" rel="stylesheet">
-		<link href="https://fonts.googleapis.com/css?family=Lexend+Deca&display=swap" rel="stylesheet">
-    <!-- Bootstrap CSS -->
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
-
     <title>Club MS8</title>
+    <link rel="icon" href="assets/img/favicon.png" sizes="16x16">
+    <meta name="author" content="Samartha">
+    <meta name="description" content="ClubMS8 is a group of auto-mototive enthusiast in the town of sagar. To be specific, we are the group of proud MS800 owners.">
+    <!-- fonts -->
+    <link href="https://fonts.googleapis.com/css?family=Monoton&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Lexend+Deca&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="assets/css/bootstrap.min.css">
+    <link rel="stylesheet" type="text/css" href="assets/css/styles.css">
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
   </head>
-	<body background="assets/img/bg.jpg" bgcolor="black">
-		<header>
-			<nav class="navbar navbar-expand-lg navbar-dark bg-dark ">
-  <a class="navbar-brand" href="#"><img class="logo" src="assets/img/logo.png" alt="">		</a>
-  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-    <span class="navbar-toggler-icon"></span>
-  </button>
-
-  <div class="collapse navbar-collapse" id="navbarSupportedContent">
-    <ul class="navbar-nav ml-auto" >
-      <li class="nav-item ">
-        <a class="nav-link" href="index.html">HOME </a>
-      </li>
-      <li class="nav-item">
-        <a class="nav-link" href="event.html">EVENTS</a>
-      </li>
-			<li class="nav-item">
-        <a class="nav-link" href="#">GALLERY</a>
-      </li>
-      <li class="nav-item">
-        <a class="nav-link" href="blog.php">BLOG</a>
-      </li>
-			<li class="nav-item">
-        <a class="nav-link" href="register.html">REGISTER</a>
-      </li>
-			<!-- <li class="nav-item active">
-        <a class="nav-link" href="about">ABOUT<span class="sr-only">(current)</span></a>
-      </li> -->
-      <li class="nav-item dropdown  active" >
-        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-          ABOUT
-        </a>
-        <div class="dropdown-menu" aria-labelledby="navbarDropdown" style="background-color:#353a40;">
-        <a class="nav-link " href="aboutus.html">ABOUT US</a>
-        <a class="nav-link" href="#">TEAM</a>
-          <div class="dropdown-divider"></div>
-        </div>
-      </li>
-
-    </ul>
-
-  </div>
-</nav>
-		</header>
+	<body background="assets/img/bg.jpg">
+    <?php include 'header.php'; ?>
 <br>
   <div class="content">
-    <div class="container-fluid">
+
+    <!-- <div class="container-fluid">
       <div class="row">
         <div class="col-12">
-        <h1 class="big-text">ABOUT - US</h1>
+        <h1 class="big-text">CLUB MS8 sagar</h1>
         <br>
-        <h2 class="tag">THE SAMNSADY CUSTOMS</h2>
+        <h2 class="tag">GLORY FOR THE CLASSIC</h2>
       </div>
       </div>
-        <br>
       <div class="row">
         <div class="col-12">
-          <p class="para-more" id="readmore">We are 20yo car enthusiast.
-             We're interested in cars since childhood.
-              There are many automobile clubs like JAWA Motorcycle club, RX club, JEEP club...
-              So being a car enthusiast we wanted to start something like this but how?
-              Maruti 800 is a very familiar car to every indian and we had 2 of 'em in our garage.
-               As it is on the edge of extiction, we started this club to create a trend in the community and
-               preserve the legend for future generation</p>
-        </div>
-        </div>
-        <br>
-        <div class="row">
-          <div class="col-12">
-            <h2 class="tag">Our Social Media Handles</h2>
-            <br>
-            <ul class="socials">
-            <li><a href="https://www.instagram.com/clubms8/"><i class="fa fa-instagram"></i> Club MS8 Instagram</a></li>
-            <li><a href="https://www.instagram.com/clubms8/"><i class="fa fa-envelope"></i> Clubms8sagar@gmail.com</a></li>
+          <ul class="list">
+            <li>Cruise down the street</li>
+            <li>Rev up the engine</li>
+            <li>Represent the community</li>
           </ul>
-          </div>
-        </div>
         </div>
       </div>
-      <br><br>
-    <div class="footer">
-      <p>© 2020 Copyright: ms800hub.rf.gd | by <a href="https://www.instagram.com/samartha__">Samartha</p></a>
-    </div>
-    <!-- Optional JavaScript -->
-    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/font-awesome@4.7.0/css/font-awesome.min.css">
+        <br>
+      <div class="row">
+        <div class="col-12">
+          <p class="para-more" id="readmore">ClubMS8 is a group of auto-mototive enthusiast in the town of sagar.
+             To be specific, we are the group of proud MS800 owners. MS800 is a legendary car manufactured and sold in India.
+              2.6M units have been sold across India during the time period of 20 years since 1984.
+               It has been the family car of middle class indians as well as rich.
+               As Maruti Suzuki India.ltd has stopped the production of this species, it is on the edge of extinction.
+                So as a tribute, to set a trend and craze as well as to persue our passion for this Legendary coupe we have come up with the
+                 <b>Club MS8 Sagar</b></p>
+        </div>
+        </div>
+        </div> -->
+        <section class="full-section"  id="fade">
+          <div class="container">
+            <div class="row" >
+              <div class="col-md-12">
+                <h1 class="big-text">About</h1>
+                <h2 class="tag">The MS800 Hub</h2>
+              </div>
+            </div>
+            <div class="row">
+              <div class="col-md-8">
+                <p class="para-more" id="readmore">
+                  MS800 Hub is a group of auto-mototive enthusiast in the town of sagar.
+                  To be specific, we are the group of proud MS800 owners. MS800 is a legendary car manufactured and sold in India.
+                  2.6M units have been sold across India during the time period of 20 years since 1984.
+                  It has been the family car of middle class indians as well as rich.
+                  As Maruti Suzuki India.ltd has stopped the production of this species, it is on the edge of extinction.
+                  So as a tribute, to set a trend and craze as well as to persue our passion for this Legendary coupe we have come up with the
+                  <b>Club MS8 Sagar</b>
+                 </p>
+                   <p class="para-more" >
+                     We are 20yo car enthusiast. We're interested in cars since
+                     childhood. There are many automobile clubs like JAWA Motorcycle
+                     club, RX club, JEEP club... So being a car enthusiast we wanted
+                     to start something like this but how? Maruti 800 is a very
+                     familiar car to every indian and we had 2 of 'em in our garage. As it is on the edge of extiction, we started this club to create a trend
+                     in the community and preserve the legend for future generation
+                   </p>
+              </div>
+              <div class="col-md-4">
+                <img src="" alt="">
+              </div>
+            </div>
+            <h3 class="tag">Our Social Media Handles</h3>
+            <ul class="list-more">
+              <li><a href="https://www.instagram.com/clubms8/" target="_blank"><i class="fa fa-instagram"></i> Club MS8 Instagram </a></li>
+              <li><a href="mailto:Clubms8sagar@gmail.com" target="_blank"><i class="fa fa-envelope"></i> Clubms8sagar@gmail.com </a></li>
+            </ul>
+          </div>
+        </section>
+      </div>
+      <br>
+    <?php include 'footer.php'; ?>
+    <script type="text/javascript">
+      document.getElementById('about').classList.add('active2');
+      document.getElementById('foo').style.position="static";
+
+    </script>
     <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
     <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
