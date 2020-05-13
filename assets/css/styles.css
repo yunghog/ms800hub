@@ -116,12 +116,11 @@ font-size: 14px;
 font-family: "Lexend deca"
 }
 .btn-primary{
-  border: none;
+  border: 2px solid #00e4ff;
   color: #000000;
   background-color: #00e4ff;
 }
 .btn-primary:hover{
-  border: 2px solid #00e4ff;
   color: #000000;
   background-color: #00e4ff;
   box-shadow: 0 0 15px #00e4ff;
