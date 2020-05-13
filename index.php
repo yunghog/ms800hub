@@ -16,6 +16,7 @@
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="assets/css/bootstrap.min.css">
     <link rel="stylesheet" type="text/css" href="assets/css/styles.css">
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
   </head>
 	<body background="assets/img/bg.jpg">
     <?php include 'header.php'; ?>
@@ -52,8 +53,30 @@
         </div>
         </div>
         </div> -->
-        <section class="full-section">
-
+        <section class="full-section"  id="fade">
+          <div class="container">
+            <div class="row" >
+              <div class="col-md-12">
+                <h1 class="big-text">MS800 Hub</h1>
+                <h2 class="tag">GLORY FOR THE CLASSIC</h2>
+              </div>
+            </div>
+            <div class="row">
+              <div class="col-md-6">
+                <p class="para-more" id="readmore">MS800 Hub is a group of auto-mototive enthusiast in the town of sagar.
+                   To be specific, we are the group of proud MS800 owners.
+                   <b>Club MS8 Sagar</b></p>
+              </div>
+            </div>
+            <div class="row">
+              <div class="col-md-4">
+                  <button class="btn btn-primary">read more</button>
+                  <button class="btn btn-outline-primary">read more</button>
+              </div>
+              <div class="col-md-2">
+              </div>
+            </div>
+          </div>
         </section>
       </div>
       <br>
