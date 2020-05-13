@@ -6,21 +6,23 @@
     <!-- Required meta tags -->
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-		<link rel="stylesheet" type="text/css" href="assets/css/styles.css">
-		<link href="https://fonts.googleapis.com/css?family=Monoton&display=swap" rel="stylesheet">
-		<link href="https://fonts.googleapis.com/css?family=Lexend+Deca&display=swap" rel="stylesheet">
+    <title>Club MS8</title>
+    <link rel="icon" href="assets/img/favicon.png" sizes="16x16">
+    <meta name="author" content="Samartha">
+    <meta name="description" content="ClubMS8 is a group of auto-mototive enthusiast in the town of sagar. To be specific, we are the group of proud MS800 owners.">
+    <!-- fonts -->
+    <link href="https://fonts.googleapis.com/css?family=Monoton&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Lexend+Deca&display=swap" rel="stylesheet">
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="assets/css/bootstrap.min.css">
-    <link rel="icon" href="assets/img/favicon.png" sizes="16x16">
-
-    <title>Club MS8</title>
+    <link rel="stylesheet" type="text/css" href="assets/css/styles.css">
   </head>
 	<body background="assets/img/bg.jpg">
     <?php include 'header.php'; ?>
 <br>
   <div class="content">
 
-    <div class="container-fluid">
+    <!-- <div class="container-fluid">
       <div class="row">
         <div class="col-12">
         <h1 class="big-text">CLUB MS8 sagar</h1>
@@ -49,9 +51,12 @@
                  <b>Club MS8 Sagar</b></p>
         </div>
         </div>
-        </div>
+        </div> -->
+        <section class="full-section">
+
+        </section>
       </div>
-      <br><br>
+      <br>
     <?php include 'footer.php'; ?>
     <script type="text/javascript">
       document.getElementById('index').classList.add('active2');
