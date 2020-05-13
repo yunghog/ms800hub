@@ -55,7 +55,7 @@
               <div class="col-8">
                 <h3 class="quote">“We have an emotional connection with the vehicle, but at some point of time, you have to take hard decisions,"</h3>
                 <h5 class="tag text-right">- Sir. C.V Raman</h5>
-                    <p class="para-more text-right">Executive director of engineering at Maruti Suzuki</p>
+                    <p class="para-more text-right">Executive director of engineering <br> Maruti Suzuki</p>
               </div>
               <div class="col-2 no-margin">
                 <img id="car-back" src="assets/img/ms8b.png" alt="" width="100%">
