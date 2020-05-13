@@ -69,12 +69,6 @@ footer a:hover{
   color: #fff;
   padding: 10px;
 }
-@media(max-width:768px){
-  .para-more{
-    width : 100%;
-  }
-}
-
 .socials a{
   font-family: 'Lexend Deca', sans-serif;
   font-size: 16px;
@@ -133,7 +127,7 @@ font-family: "Lexend deca"
   box-shadow: 0 0 15px #00e4ff;
 }
 .btn-outline-primary{
-  border: 1px solid #00e4ff;
+  border: 2px solid #00e4ff;
   background-color: #000000;
   color: #00e4ff;
 }
