@@ -23,37 +23,6 @@
     <?php include 'header.php'; ?>
 <br>
   <div class="content">
-
-    <!-- <div class="container-fluid">
-      <div class="row">
-        <div class="col-12">
-        <h1 class="big-text">CLUB MS8 sagar</h1>
-        <br>
-        <h2 class="tag">GLORY FOR THE CLASSIC</h2>
-      </div>
-      </div>
-      <div class="row">
-        <div class="col-12">
-          <ul class="list">
-            <li>Cruise down the street</li>
-            <li>Rev up the engine</li>
-            <li>Represent the community</li>
-          </ul>
-        </div>
-      </div>
-        <br>
-      <div class="row">
-        <div class="col-12">
-          <p class="para-more" id="readmore">ClubMS8 is a group of auto-mototive enthusiast in the town of sagar.
-             To be specific, we are the group of proud MS800 owners. MS800 is a legendary car manufactured and sold in India.
-              2.6M units have been sold across India during the time period of 20 years since 1984.
-               It has been the family car of middle class indians as well as rich.
-               As Maruti Suzuki India.ltd has stopped the production of this species, it is on the edge of extinction.
-                So as a tribute, to set a trend and craze as well as to persue our passion for this Legendary coupe we have come up with the
-                 <b>Club MS8 Sagar</b></p>
-        </div>
-        </div>
-        </div> -->
         <section class="full-section"  id="fade">
           <div class="container">
             <div class="row" >
