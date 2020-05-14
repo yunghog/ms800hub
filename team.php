@@ -40,9 +40,9 @@
                     <h5 class="card-title">Samartha</h5>
                     <p class="card-text"><small class="text-muted text-primary">Founder</small></p>
                     <p class="card-text">20yo developer and music producer based in Sagar. Passionate about cars. Highly influenced by Dad's car workshop 'Aditya Automobiles'.</p>
-                    <a href="https://www.instagram.com/samartha__/"><i class="fa fa-instagram">  </i></a>
-                    <a href="https://www.youtube.com/c/YUNGHOGbeats"><i class="fa fa-youtube">  </i></a>
-                    <a href="https://soundcloud.com/user-649397724"><i class="fa fa-soundcloud">  </i></a>
+                    <a href="https://www.instagram.com/samartha__/" target="_blank"><i class="fa fa-instagram">  </i></a>
+                    <a href="https://www.youtube.com/c/YUNGHOGbeats" target="_blank"><i class="fa fa-youtube">  </i></a>
+                    <a href="https://soundcloud.com/user-649397724" target="_blank"><i class="fa fa-soundcloud">  </i></a>
                   </div>
                 </div>
                 </div>
@@ -53,8 +53,8 @@
                     <h5 class="card-title">Sadeep</h5>
                     <p class="card-text"><small class="text-muted text-primary">Co-Founder</small></p>
                     <p class="card-text">Student and Illustrator from Kerala. Influenced by Keralians' love towards vehicles and modification culture. Based in Sagar.</p>
-                    <a href="https://www.instagram.com/sady_walker/"><i class="fa fa-instagram">  </i></a>
-                    <a href="https://www.youtube.com/c/YUNGHOGbeats"><i class="fa fa-youtube">  </i></a>
+                    <a href="https://www.instagram.com/sady_walker/" target="_blank"><i class="fa fa-instagram">  </i></a>
+                    <a href="https://www.youtube.com/c/YUNGHOGbeats" target="_blank"><i class="fa fa-youtube">  </i></a>
                   </div>
                 </div>
               </div>
@@ -62,7 +62,7 @@
             <br>
             <div class="row">
               <div class="col-12 text-center">
-                <h2 class="tag">OUR SPONSERS</h2>
+                <h2 class="tag">Our Sponsers</h2>
               </div>
             </div>
             <div class="row">
@@ -76,9 +76,9 @@
                     <p class="card-text">The well know car workshop of Sagar located at Jog Road. All sort of services like oil change,engine tuning,body shop works,
                      repairing, painting, tinkering, washing..... for MS cars is done here.
                       Friendly staffs and highly experienced technicians take good care of your car.</p>
-                    <a href="https://www.instagram.com/aditya.automobiles/"><i class="fa fa-instagram">  </i></a>
-                    <a href="https://goo.gl/maps/4aBJupTobfS8cnji8"><i class="fa fa-map-marker">  </i></a>
-                    <a href="http://adityaautomobiles.rf.gd"><i class="fa fa-link">  </i></a>
+                    <a href="https://www.instagram.com/aditya.automobiles/" target="_blank"><i class="fa fa-instagram">  </i></a>
+                    <a href="https://goo.gl/maps/4aBJupTobfS8cnji8" target="_blank"><i class="fa fa-map-marker">  </i></a>
+                    <a href="http://adityaautomobiles.rf.gd" target="_blank"><i class="fa fa-link">  </i></a>
                   </div>
                   <div class="no-margin">
                     <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d15473.638447617157!2d75.0140872!3d14.1707707!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x18a683fe2f2cf9e!2sAditya%20Automobiles!5e0!3m2!1sen!2sin!4v1589462942562!5m2!1sen!2sin" width="100%" height="400" frameborder="0" style="border:0;" allowfullscreen="" aria-hidden="false" tabindex="0"></iframe>
