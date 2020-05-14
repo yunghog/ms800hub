@@ -37,7 +37,7 @@
               </div>
               <div class="col-md-6">
                 <div class="signup-form">
-                  <form class="form-control2" action="index.html" method="post">
+                  <form class="form-control2" action="assets/php/signup.php" method="post">
                     <div class="row">
                       <div class="col-12">
                         <h5 class="tag text-primary text-center">SIGN-UP</h5>
@@ -81,9 +81,20 @@
                     <br> -->
                     <div class="row">
                       <div class="col-6">
-                        <input type="password" name="password" value="" required>
+                        <input type="password" name="password" value="" required placeholder="New Password">
+                      </div>
+                      <div class="col-6">
+                        <input type="password_re" name="password" value="" required placeholder="Re-enter Password">
                       </div>
                     </div>
+                    <br><br>
+                    <div class="row text-center">
+                      <div class="col-12">
+                        <button type="submit" class="btn btn-primary">sign up</button>
+                        <a href="signin.php"><button class="btn btn-outline-primary">sign in</button></a>
+                      </div>
+                    </div>
+                    <br><br><br><br><br><br>
                   </form>
                 </div>
               </div>
