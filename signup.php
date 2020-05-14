@@ -70,6 +70,11 @@
                       </div>
                     </div>
                     <br>
+                    <div class="row">
+                      <div class="col-12">
+                        <input type="text" name="place" value="" placeholder="Place" required>
+                      </div>
+                    </div><br>
                     <!-- <div class="row">
                       <div class="col-4">
                         <button id="send_otp" type="button" class="btn btn-primary" onclick="send_otp_()">send otp</button>
