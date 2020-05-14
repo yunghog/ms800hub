@@ -1,17 +1,16 @@
 <?php
 include 'db_connect.php';
 $name = $_POST['name'];
-$phno = $_POST['ph'];
-$modelx = $_POST['model'];
-$uname = $_POST['uname'];
-$pwd = $_POST['pwd'];
+$username = $_POST['username'];
+$phno = $_POST['phno'];
+$model = $_POST['model'];
+$password = $_POST['password'];
 $role = 3;
 $place = $_POST['place'];
-$desc1 = $_POST['desc1'];
-$plate = $_POST['id'];
-$mail = $_POST['mail'];
-$sql = "INSERT Into users (name, username, password, role, phno, place, platenum, model, description,email)
-        values('$name','$uname','$pwd','$role','$phno','$place','$plate','$modelx','$desc1','$mail')";
+$veh_id = $_POST['veh_id'];
+$email = $_POST['email'];
+$sql = "INSERT Into users (name, username, password, role, phno, place, veh_id, model, email)
+        values('$name','$username','$password','$role','$phno','$place','$veh_id','$modelx','$mail')";
 $exec = mysqli_query($conn,$sql);
 if(mysqli_error($conn)){
   echo "<script>alert('Error in Signing up. Pleasetry again');</script>";
