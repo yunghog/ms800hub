@@ -19,7 +19,6 @@ else{
     echo "<script>alert('Your form been submitted. We will call you soon !');</script>";
 }
 $conn->close();
-
 ?>
 <script type="text/javascript">
 window.location = "../../index.html";
