@@ -63,25 +63,36 @@
             </div>
             <div class="row">
               <div class="col-sm-6">
-              <div class="card border-dark" style="border:none;border-radius: 10px;">
-                <iframe height="300px" src="https://www.youtube.com/embed/CrmutHczGSU" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen=""></iframe>
-                <div class="card-body" style="background-color:black;">
-                  <h5 class="card-title para">Celebration</h5>
-                  <p class="card-text"><span class="para">Club MS8 50k insta Family celebration</span></p>
-                  <a href="https://www.youtube.com/watch?v=pDT6yYm4-OI&amp;t=2s" class="btn btn-primary">More</a>
+                <div class="card bg-black">
+                <iframe height="300px" src="https://www.youtube.com/embed/CrmutHczGSU" frameborder="0" allow="accelerometer; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                <div class="card-body">
+                  <div class="row align-items-center">
+                    <div class="col-9">
+                      <h5 class="card-title para">Celebration</h5>
+                      <p class="card-text"><span class="para">Club MS8 50k insta Family celebration
+                      </span></p>
+                    </div>
+                    <div class="col-2">
+                      <a href="https://www.youtube.com/watch?v=pDT6yYm4-OI&t=2s"  target="_blank"><button class="btn btn-primary">More</button></a>
+                    </div>
+                  </div>
                 </div>
               </div>
             </div>
             <div class="col-sm-6">
-              <div class="card border-dark" style="border:none;border-radius: 10px;">
+              <div class="card bg-black">
               <iframe height="300px;" src="https://www.youtube.com/embed/pDT6yYm4-OI" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen=""></iframe>
-              <div class="card-body" style="background-color:black;">
-                <h5 class="card-title para">Thrisur meet 2019</h5>
-                <p class="card-text"><span class="para">MS8
-                                      BROTHERHOOD
-                                      KL08 Thrisur,Kerala
-                                      </span></p>
-                <a href="https://www.youtube.com/watch?v=pDT6yYm4-OI&amp;t=2s" class="btn btn-primary">More</a>
+              <div class="card-body">
+                <div class="row align-items-center">
+                  <div class="col-9">
+                    <h5 class="card-title para">Thrisur meet 2019</h5>
+                    <p class="card-text"><span class="para">MS8 Brotherhoood KL08 Thrisur,Kerala
+                    </span></p>
+                  </div>
+                  <div class="col-2">
+                    <a href="https://www.youtube.com/watch?v=pDT6yYm4-OI&amp;t=2s" target="_blank" ><button class="btn btn-primary">More</button></a>
+                  </div>
+                </div>
               </div>
             </div>
 
