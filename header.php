@@ -28,8 +28,8 @@
   <li class="nav-item" id="blog">
     <a class="nav-link" href="blog.php">BLOG</a>
   </li>
-  <li class="nav-item" id="register">
-    <a class="nav-link" href="register.html">REGISTER</a>
+  <li class="nav-item" id="signup">
+    <a class="nav-link" href="signup.php">SIGNUP</a>
   </li>
   <li class="nav-item" id="login">
     <a class="nav-link" href="login.php">SIGN IN</a>
