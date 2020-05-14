@@ -1,5 +1,5 @@
 <?php
-include '../assets/php/db_connect.php';
+include 'assets/php/db_connect.php';
 session_start();
 if(isset($_SESSION['role'])){
 if($_SESSION['role']==1 || $_SESSION['role']==2)
