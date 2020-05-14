@@ -32,52 +32,61 @@
               </div>
             </div>
             <div class="row">
-              <div class="col-md-4 no-margin" >
-                <img src="assets/img/ms8i1.png" alt="" width="100%">
-              </div>
               <div class="col-md-8">
                 <p class="para-more">
-                  MS800 Hub is a group of auto-mototive enthusiast in the town of sagar.
-                  To be specific, we are the group of proud MS800 owners. MS800 is a legendary car manufactured and sold in India.
-                  2.6M units have been sold across India during the time period of 20 years since 1984.
-                  It has been the family car of middle class indians as well as rich.
-                  As Maruti Suzuki India.ltd has stopped the production of this species, it is on the edge of extinction.
-                  So as a tribute, to set a trend and to carry on our passion for this Legendary hatch we have come up with the
-                  <b>MS800 Hub</b>
+                  Activities of the CLUB MS8 Sagar includes car meets,
+                  road trips, hunt (hunting for the unique rides in the
+                  city).
                 </p>
+                <p class="para-more">
+                  In the town of Sagar. All the events of the Club is
+                  carried out in presense of SAMNSADY. As the Club is
+                  at initial stage we have very few members. We are
+                  trying to reach more and more people through irl and
+                  social media. Till date we have not cunducted any meet.
+                   We hope our community will grow more!
+                </p>
+              </div>
+              <div class="col-md-4 no-margin" >
+                <img src="assets/img/sponser1.jpg" alt="" width="100%">
               </div>
             </div>
           </div>
         </section>
+        <br>
         <section class="full-section"  id="fade">
           <div class="container">
             <div class="row" >
               <div class="col-md-12">
-                <h2 class="tag">Mission</h2>
+                <h2 class="tag">Events by CLUB MS8 Kerala</h2>
               </div>
             </div>
             <div class="row">
-              <div class="col-md-8">
-                  <p class="para-more" >
-                     We are 20yo car enthusiast. We're interested in cars since
-                     childhood. There are many automobile clubs like JAWA Motorcycle
-                     club, RX club, JEEP club... So being a car enthusiast we wanted
-                     to start something like this but how? Maruti 800 is a very
-                     familiar car to every indian and we had 2 of 'em in our garage. As it is on the edge of extiction, we started this club to create a trend
-                     in the community and preserve the legend for future generation
-                   </p>
+              <div class="col-sm-6">
+              <div class="card border-dark" style="border:none;border-radius: 10px;">
+                <iframe height="300px" src="https://www.youtube.com/embed/CrmutHczGSU" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen=""></iframe>
+                <div class="card-body" style="background-color:black;">
+                  <h5 class="card-title para">Celebration</h5>
+                  <p class="card-text"><span class="para">Club MS8 50k insta Family celebration</span></p>
+                  <a href="https://www.youtube.com/watch?v=pDT6yYm4-OI&amp;t=2s" class="btn btn-primary">More</a>
+                </div>
               </div>
             </div>
-            <div class="row">
-              <div class="col-md-8">
-                <h3 class="tag">Our Social Media Handles</h3>
-                <ul class="list-more">
-                  <li><a href="https://www.instagram.com/clubms8/" target="_blank"><i class="fa fa-instagram"></i> Club MS8 Instagram </a></li>
-                  <li><a href="mailto:Clubms8sagar@gmail.com" target="_blank"><i class="fa fa-envelope"></i> Clubms8sagar@gmail.com </a></li>
-                </ul>
+            <div class="col-sm-6">
+              <div class="card border-dark" style="border:none;border-radius: 10px;">
+              <iframe height="300px;" src="https://www.youtube.com/embed/pDT6yYm4-OI" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen=""></iframe>
+              <div class="card-body" style="background-color:black;">
+                <h5 class="card-title para">Thrisur meet 2019</h5>
+                <p class="card-text"><span class="para">MS8
+                                      BROTHERHOOD
+                                      KL08 Thrisur,Kerala
+                                      </span></p>
+                <a href="https://www.youtube.com/watch?v=pDT6yYm4-OI&amp;t=2s" class="btn btn-primary">More</a>
               </div>
             </div>
 
+            </div>
+            </div>
           </div>
         </section>
       </div>
