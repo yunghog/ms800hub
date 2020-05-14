@@ -20,7 +20,7 @@
     </div>
   </li>
   <li class="nav-item " id="events">
-    <a class="nav-link" href="event.html">EVENTS</a>
+    <a class="nav-link" href="events.php">EVENTS</a>
   </li>
   <li class="nav-item" id="gallery">
     <a class="nav-link" href="#">GALLERY</a>
