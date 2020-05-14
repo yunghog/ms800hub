@@ -99,7 +99,7 @@
                         <a href="signin.php"><button class="btn btn-outline-primary">sign in</button></a>
                       </div>
                     </div>
-                    <br><br><br><br><br><br>
+                    <br><br><br><br><br>
                   </form>
                 </div>
               </div>
