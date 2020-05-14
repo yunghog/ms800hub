@@ -313,6 +313,9 @@ position: absolute;
   transition: .3s ease;
 }
 .dropdown-menu .nav-link{
+  color: #fff !important;
+}
+.dropdown-menu .nav-link.active2{
   color: #00e4ff !important;
 }
 .active2 a{

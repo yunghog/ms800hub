@@ -15,8 +15,8 @@
       ABOUT
     </a>
     <div class="dropdown-menu animate slideIn" aria-labelledby="navbarDropdown">
-    <a class="nav-link" id="aboutus" href="about.html">ABOUT US</a>
-    <a class="nav-link" href="team.html" id="team">TEAM</a>
+    <a class="nav-link" id="about_us" href="about.php">ABOUT US</a>
+    <a class="nav-link" href="team.php" id="team">TEAM</a>
     </div>
   </li>
   <li class="nav-item " id="events">

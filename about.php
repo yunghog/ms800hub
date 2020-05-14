@@ -32,16 +32,19 @@
               </div>
             </div>
             <div class="row">
+              <div class="col-md-4 no-margin" >
+                <img src="assets/img/ms8i1.png" alt="" width="100%">
+              </div>
               <div class="col-md-8">
-                <p class="para-more" id="readmore">
+                <p class="para-more">
                   MS800 Hub is a group of auto-mototive enthusiast in the town of sagar.
                   To be specific, we are the group of proud MS800 owners. MS800 is a legendary car manufactured and sold in India.
                   2.6M units have been sold across India during the time period of 20 years since 1984.
                   It has been the family car of middle class indians as well as rich.
                   As Maruti Suzuki India.ltd has stopped the production of this species, it is on the edge of extinction.
-                  So as a tribute, to set a trend and craze as well as to persue our passion for this Legendary coupe we have come up with the
-                  <b>Club MS8 Sagar</b>
-                 </p>
+                  So as a tribute, to set a trend and to carry on our passion for this Legendary hatch we have come up with the
+                  <b>MS800 Hub</b>
+                </p>
               </div>
             </div>
           </div>
@@ -99,8 +102,8 @@
     <?php include 'footer.php'; ?>
     <script type="text/javascript">
       document.getElementById('about').classList.add('active2');
+      document.getElementById('about_us').classList.add('active2');
       document.getElementById('foo').style.position="static";
-
     </script>
     <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
     <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
