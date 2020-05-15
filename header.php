@@ -31,8 +31,8 @@
   <li class="nav-item" id="signup">
     <a class="nav-link" href="signup.php">SIGNUP</a>
   </li>
-  <li class="nav-item" id="login">
-    <a class="nav-link" href="login.php">SIGN IN</a>
+  <li class="nav-item" id="signin">
+    <a class="nav-link" href="signin.php">SIGN IN</a>
   </li>
 </ul>
 </div>
