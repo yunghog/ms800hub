@@ -34,7 +34,6 @@ if(isset($_SESSION['user_id'])){
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="assets/css/bootstrap.min.css">
     <link rel="stylesheet" type="text/css" href="assets/css/styles.css">
-    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
   </head>
 	<body background="assets/img/bg.jpg">
     <?php include 'header.php'; ?>
@@ -82,16 +81,13 @@ if(isset($_SESSION['user_id'])){
                         <button type="submit" name="signin" class="btn btn-primary"> Sign in</button>
                       </div>
                     </div>
-                    <br>
                   </form>
                 </div>
               </div>
             </div>
           </div>
         </section>
-        <br>
       </div>
-      <br>
     <?php include 'footer.php'; ?>
     <script type="text/javascript">
       document.getElementById('signin').classList.add('active2');
