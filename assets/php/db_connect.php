@@ -2,6 +2,6 @@
 $servername = "localhost";
 $username = "root";
 $password = "";
-$dbname="clubms8";
+$dbname="ms800hub";
 $conn = mysqli_connect($servername, $username, $password, $dbname);
 ?>
