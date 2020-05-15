@@ -32,6 +32,48 @@ if (isset($_SESSION['user_id'])){
       </head>
     	<body background="../assets/img/bg.jpg">
         <?php include 'header.php'; ?>
+        <br>
+        <div class="content" id="fade">
+          <div class="container">
+            <div class="row">
+              <div class="col-md-12">
+                <h1 class="big-text">Admin Panel</h1>
+                <h3 class="tag">Welcome Admin : <?php echo $username; ?></h3>
+              </div>
+            </div>
+            <br>
+            <div class="row">
+              <div class="col-md-3">
+                <a href="#">
+                  <div class="panel-card">
+                    <h3>Gallery</h3>
+                  </div>
+                </a>
+              </div>
+              <div class="col-md-3" id="fade">
+                <a href="#">
+                  <div class="panel-card">
+                    <h3>Blog</h3>
+                  </div>
+                </a>
+              </div>
+              <?php
+                if($_SESSION['role']==1){
+                  ?>
+                  <div class="col-md-3" >
+                    <a href="#">
+                      <div class="panel-card">
+                        <h3>User Control</h3>
+                        <p>No. of users : </p>
+                      </div>
+                    </a>
+                  </div>
+                  <?php
+                }
+               ?>
+            </div>
+          </div>
+        </div>
         <?php include 'footer.php'; ?>
         <script type="text/javascript">
           document.getElementById('index').classList.add('active2');
