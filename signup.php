@@ -86,10 +86,11 @@
                     <br> -->
                     <div class="row">
                       <div class="col-6">
-                        <input type="password" name="password" value="" required placeholder="New Password">
+                        <input id="password" type="password" name="password" value="" required placeholder="New Password">
                       </div>
                       <div class="col-6">
-                        <input type="password_re" name="password" value="" required placeholder="Re-enter Password">
+                        <input id="password2" type="password" name="password_re" value="" required placeholder="Re-enter Password">
+                        <i class="fa fa-eye password-btn" onclick="toggle_password()"></i>
                       </div>
                     </div>
                     <br><br>
@@ -113,6 +114,25 @@
     <script type="text/javascript">
       document.getElementById('signup').classList.add('active2');
       document.getElementById('foo').style.position="static";
+    </script>
+    <script type="text/javascript">
+      function toggle_password() {
+        var password=document.getElementById("password");
+        var password2=document.getElementById("password2");
+
+        if (password.type==='password') {
+          password.type='text';
+        }
+        else{
+          password.type='password';
+        }
+        if (password2.type==='password') {
+          password2.type='text';
+        }
+        else{
+          password2.type='password';
+        }
+      }
     </script>
     <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
     <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
