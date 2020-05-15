@@ -4,7 +4,7 @@ include 'db_connect.php';
 
   if(isset($_POST['signin']))
   {
-    $username = mysqli_real_escape_string($conn,$_POST['uname']);
+    $username = mysqli_real_escape_string($conn,$_POST['username']);
     $password = mysqli_real_escape_string($conn,$_POST['password']);
     // $password = sha1($password);
 
@@ -18,14 +18,14 @@ include 'db_connect.php';
       $_SESSION['role']=$user_id['role'];
       $_SESSION['user_id']=$user_id['id'];
       if($user_id['role']==1){
-        echo "<script> window.open('../../admin.php','_self');</script>";
+        echo "<script> window.location = '../../admin/';</script>";
       }
       if($user_id['role']==2){
-        echo "<script> window.open('../../admin.php','_self');</script>";
+        echo "<script> window.location = '../../admin/';</script>";
 
       }
       if($user_id['role']==3){
-        echo "<script> window.open('../../blog.php','_self');</script>";
+        echo "<script> window.location = '../../community/';</script>";
 
       }
 
@@ -33,7 +33,7 @@ include 'db_connect.php';
     else
     {
       echo "<script> alert('Your Login Name or Password is invalid');
-      window.location.href='../../login.php';</script>";
+      window.location.href='../../signin.php';</script>";
     }
   }
 
