@@ -10,7 +10,7 @@ $place = $_POST['place'];
 $veh_id = $_POST['veh_id'];
 $email = $_POST['email'];
 $sql = "INSERT Into users (name, username, password, role, phno, place, veh_id, model, email)
-        values('$name','$username','$password','$role','$phno','$place','$veh_id','$modelx','$mail')";
+        values('$name','$username','$password','$role','$phno','$place','$veh_id','$model','$email')";
 $exec = mysqli_query($conn,$sql);
 if(mysqli_error($conn)){
   echo "<script>alert('Error in Signing up. Pleasetry again');</script>";
@@ -21,5 +21,5 @@ else{
 $conn->close();
 ?>
 <script type="text/javascript">
-window.location = "../../index.html";
+window.location = "../../index.php";
 </script>
