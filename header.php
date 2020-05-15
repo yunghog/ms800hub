@@ -23,7 +23,7 @@
     <a class="nav-link" href="events.php">EVENTS</a>
   </li>
   <li class="nav-item" id="gallery">
-    <a class="nav-link" href="#">GALLERY</a>
+    <a class="nav-link" href="gallery.php">GALLERY</a>
   </li>
   <li class="nav-item" id="blog">
     <a class="nav-link" href="blog.php">BLOG</a>

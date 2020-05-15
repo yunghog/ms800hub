@@ -44,14 +44,14 @@ if (isset($_SESSION['user_id'])){
             <br>
             <div class="row">
               <div class="col-md-3">
-                <a href="#">
+                <a href="gallery.php">
                   <div class="panel-card">
                     <h3>Gallery</h3>
                   </div>
                 </a>
               </div>
               <div class="col-md-3" id="fade">
-                <a href="#">
+                <a href="blog.php">
                   <div class="panel-card">
                     <h3>Blog</h3>
                   </div>
@@ -61,7 +61,7 @@ if (isset($_SESSION['user_id'])){
                 if($_SESSION['role']==1){
                   ?>
                   <div class="col-md-3" >
-                    <a href="#">
+                    <a href="user_control.php">
                       <div class="panel-card">
                         <h3>User Control</h3>
                         <p>No. of users : </p>

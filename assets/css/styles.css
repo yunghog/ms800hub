@@ -445,6 +445,12 @@ position: absolute;
   position: absolute;
   left: 190px;
 }
+.form-control2  textarea{
+  padding: 10px;
+  background-color: #000000;
+  color: #fff;
+  border: 2px solid #00e4ff;
+}
 .menu-bar{
   align-items: center;
   padding: 5px;
