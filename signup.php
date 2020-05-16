@@ -97,7 +97,7 @@
                     <div class="row text-center">
                       <div class="col-12">
                         <button type="submit" class="btn btn-primary">sign up</button>
-                        <a href="signin.php"><button class="btn btn-outline-primary">sign in</button></a>
+                        <a href="signin.php"><button type="button" class="btn btn-outline-primary">sign in</button></a>
                       </div>
                     </div>
                     <br><br><br><br><br>
