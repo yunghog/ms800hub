@@ -43,7 +43,7 @@ if (isset($_SESSION['user_id'])){
             </div>
             <br>
             <div class="row">
-              <div class="col-md-12">
+              <div class="col-md-12 table-column">
                 <table class="table table-striped bg-black " id="gallery-table">
                   <thead>
                     <tr>
@@ -89,6 +89,7 @@ if (isset($_SESSION['user_id'])){
               <div class="col-md-12">
                 <h3 class="tag">Post a Gallery Image</h3>
               </div>
+            </div>
               <br>
               <div class="row">
                 <div class="col-md-12">
@@ -101,7 +102,7 @@ if (isset($_SESSION['user_id'])){
                     <br>
                     <div class="row">
                       <div class="col-12">
-                        <textarea name="caption" rows="3" cols="80" placeholder="Caption!!!"></textarea>
+                        <textarea name="caption" rows="3"  placeholder="Caption!!!"></textarea>
                       </div>
                     </div>
                     <br>
@@ -117,7 +118,6 @@ if (isset($_SESSION['user_id'])){
                   </form>
                 </div>
               </div>
-            </div>
           </div>
         </div>
         <?php include 'footer.php'; ?>
