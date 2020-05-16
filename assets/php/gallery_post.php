@@ -26,7 +26,7 @@ include 'db_connect.php';
 
       if(empty($errors)==true){
          move_uploaded_file($file_tmp,"../img/gallery/"."gal_image_".$user_id.$file_name);
-         $target="gal_image".$user_id.$file_name;
+         $target="gal_image_".$user_id.$file_name;
          //$query="INSERT INTO `gallery` (`image`) VALUES ('$target')";
          $query="INSERT INTO `gallery`(`image`, `author_id`, `caption`, `date`, `tag`) VALUES ('$target','$user_id','$caption','$today','$tag')";
          $exec=mysqli_query($conn,$query);
