@@ -61,7 +61,7 @@ if (isset($_SESSION['user_id'])){
                       $gal_query="SELECT a.*, b.* from gallery a, users b where b.id='$user_id' and a.author_id='$user_id' and a.active=1";
                     }
                     if($_SESSION['role']==1){
-                      $gal_query="SELECT a.*, b.* from gallery a, users b where a.active=1 group by a.author_id";
+                      $gal_query="SELECT a.*, b.* from gallery a, users b where a.active=1 and a.author_id=b.id order by a.author_id";
                     }
                     $i=1;
                     $gal_exec=mysqli_query($conn,$gal_query);
