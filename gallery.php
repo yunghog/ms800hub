@@ -45,7 +45,7 @@ include 'assets/php/db_connect.php';
                 $args=$gal_rows['image'].'%'.$gal_rows['username'].'%'.$gal_rows['caption'].'%'.$gal_rows['date'].'%'.$gal_rows['tag'];
                 // echo $args;
                 ?>
-              <div class="col-md-3">
+              <div class="col-md-3 bg-black align-items-center">
                   <div class="thumbnail" onclick="openGalleryModel('<?php echo $args; ?>')">
                       <img src="assets/img/gallery/<?php echo $gal_rows['image'];?>" >
                       <div class="thumbnail-overlay">
