@@ -1,187 +1,144 @@
 <?php
 include 'assets/php/db_connect.php';
-
 ?>
-
 
 <!doctype html>
 <html lang="en">
   <head>
     <!-- Required meta tags -->
     <meta charset="utf-8">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-		<link rel="stylesheet" type="text/css" href="assets/css/styles.css">
-		<link href="https://fonts.googleapis.com/css?family=Monoton&display=swap" rel="stylesheet">
-		<link href="https://fonts.googleapis.com/css?family=Lexend+Deca&display=swap" rel="stylesheet">
-    <!-- Bootstrap CSS -->
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
-
     <title>Club MS8</title>
+    <link rel="icon" href="assets/img/favicon.png" sizes="16x16">
+    <meta name="author" content="Samartha">
+    <meta name="description" content="ClubMS8 is a group of auto-mototive enthusiast in the town of sagar. To be specific, we are the group of proud MS800 owners.">
+    <!-- fonts -->
+    <link href="https://fonts.googleapis.com/css?family=Monoton&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Lexend+Deca&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="assets/css/bootstrap.min.css">
+    <link rel="stylesheet" type="text/css" href="assets/css/styles.css">
   </head>
 	<body background="assets/img/bg.jpg">
-		<header>
-			<nav class="navbar navbar-expand-lg navbar-dark bg-dark ">
-  <a class="navbar-brand" href="#"><img class="logo" src="assets/img/logo.png" alt="">		</a>
-  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-    <span class="navbar-toggler-icon"></span>
-  </button>
-
-  <div class="collapse navbar-collapse" id="navbarSupportedContent">
-    <ul class="navbar-nav ml-auto" >
-      <li class="nav-item ">
-        <a class="nav-link" href="index.html">HOME <span class="sr-only">(current)</span></a>
-      </li>
-      <li class="nav-item">
-        <a class="nav-link" href="event.html">EVENTS</a>
-      </li>
-			<li class="nav-item">
-        <a class="nav-link" href="gallery.php">GALLERY</a>
-      </li>
-      <li class="nav-item active">
-        <a class="nav-link" href="blog.php">BLOG</a>
-      </li>
-			<li class="nav-item">
-        <a class="nav-link" href="register.html">REGISTER</a>
-      </li>
-			<!-- <li class="nav-item">
-        <a class="nav-link" href="about">ABOUT</a>
-      </li> -->
-      <li class="nav-item dropdown" >
-        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-          ABOUT
-        </a>
-        <div class="dropdown-menu" aria-labelledby="navbarDropdown" style="background-color:#353a40;">
-        <a class="nav-link" href="aboutus.html">ABOUT US</a>
-        <a class="nav-link" href="team.html">TEAM</a>
-          <div class="dropdown-divider"></div>
-        </div>
-      </li>
-      <!-- <li class="nav-item dropdown">
-        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-          Dropdown
-        </a>
-        <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-          <a class="dropdown-item" href="#">Action</a>
-          <a class="dropdown-item" href="#">Another action</a>
-          <div class="dropdown-divider"></div>
-          <a class="dropdown-item" href="#">Something else here</a>
-        </div>
-      </li>
-      <li class="nav-item">
-        <a class="nav-link disabled" href="#" tabindex="-1" >Disabled</a>
-      </li> -->
-    </ul>
-
-  </div>
-</nav>
-		</header>
+    <?php include 'header.php'; ?>
 <br>
   <div class="content">
-
-    <div class="container-fluid">
-      <div class="row">
-        <div class="col-12">
-        <h1 class="big-text">BLOG</h1>
-        <br>
-        <h2 class="tag">Speed costs, how fast do you want to go?</h2>
-      </div>
-      </div>
-      <br>
-      <!-- <div class="row">
-        <div class="col-sm-2"></div>
-        <div class="col-sm-8">
-        <div class="blog-card">
-          <div class="blog-image">
-            <img src="assets/img/blogimg/1.jpg" alt="">
-          </div>
-          <div class="blog-content">
-            <h2>TITLE</h2>
-            <p>Hello sir, first of all thank you for this script.
-               I loved all your videos. Great videos i ever saw, clean explanation of the code..
-                Looking for some some stuffs like this.. My question here is, once i upload images using above scripts,
-                 only the half portion of the images are displayed, Why so?? Thank you</p>
-          <a href="#"><h4>Author</h4></a>
-            <p>12-01-20</p>
-          </div>
-        </div>
-        </div>
-        <div class="col-sm-2"></div>
-      </div> -->
-        <?php
-        $query="SELECT a.*,b.name from blog a,users b where a.active=1 and a.user_id=b.id";
-        $exec=mysqli_query($conn,$query);
-        while($result=mysqli_fetch_array($exec)){
-          $title=$result['title'];
-          $para=$result['para'];
-          $user=$result['name'];
-          $img=$result['image'];
-          $date=$result['tdate'];
-          ?>
-          <div class="row" id="blog-<?php echo $result['id']; ?>" >
-
-            <div class="col-sm-2"></div>
-            <div class="col-sm-8">
-            <div class="blog-card">
-              <div class="blog-image">
-                <img src="<?php echo $img; ?>" alt="Club MS8 Sagar">
+        <section class="full-section"  id="fade">
+          <div class="container">
+            <div class="row" >
+              <div class="col-md-12 text-center">
+                <h1 class="big-text">Blog</h1>
+                <h2 class="tag">If speed costs, how fast you wanna go?</h2>
               </div>
-              <div class="blog-content">
-                <h2><?php echo $title; ?></h2>
-                <p><?php echo $para; ?></p>
-                <div class="row blog-footer">
-                  <div class="col-4"><?php echo $date;?></div>
-                  <div class="col-4">by <?php echo $user; ?></div>
-                  <div class="col-2"><i class="fa fa-whatsapp sharelink" onclick="sharelink(<?php echo $result['id']; ?>)"></i> </div>
-                  <div class="col-2"><i class="fa fa-facebook sharelink" onclick="sharefb(<?php echo $result['id']; ?>)"></i></div>
+            </div>
+          </div>
+        </section>
+        <br>
+        <section class="full-section"  id="fade">
+          <div class="container" id="blog_thumb_cont">
+            <div class="row">
+              <?php
+              $gal_query="SELECT a.*, b.name, b.username from blog a, users b where a.active=1 and a.author_id=b.id order by a.date";
+              // echo $gal_query;
+              $gal_exec=mysqli_query($conn,$gal_query);
+              while($gal_rows=mysqli_fetch_array($gal_exec)){
+                //$args=$gal_rows['image'].'%'.$gal_rows['username'].'%'.$gal_rows['caption'].'%'.$gal_rows['date'].'%'.$gal_rows['tag'];
+                // echo $args;
+                ?>
+                <div class="col-md-4">
+                  <div class="blog-thumb" onclick="openBlog('<?php echo $gal_rows['id'];?>')">
+                    <div class="row no-gutters">
+                      <div class="col-5">
+                        <div class="blog-image">
+                          <img src="assets/img/blog/<?php echo $gal_rows['image']; ?>" alt="" height="100%">
+                        </div>
+                      </div>
+                      <div class="col-7">
+                        <div class="blog-desc">
+                          <h5><?php echo $gal_rows['title']; ?></h5>
+                          <p>by <?php echo $gal_rows['name']; ?> <br> pc : <?php echo $gal_rows['tag']; ?><br> <?php echo $gal_rows['date']; ?> </p>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div><br> <?php } ?>
+
+            </div>
+          </div>
+        </section>
+        <?php
+          if(isset($_GET['bid'])){
+            $id=$_GET['bid'];
+            $blog_query="SELECT a.*, b.name, b.username, b.name from blog a, users b where a.active=1 and a.author_id=b.id and a.id='$id'";
+            $blog_exec=mysqli_query($conn,$blog_query);
+            while ($blog_rows=mysqli_fetch_array($blog_exec)) {
+              ?>
+              <div class="container">
+                <div class="blog-full">
+                <div class="row no-gutters">
+                    <div class="col-6">
+                      <div class="blog-image-full" >
+                        <button class="btn btn-primary back-button" type="button" name="back-button" onclick="goBackBlog()"> <i class="fa fa-arrow-left"></i></button>
+                        <button class="btn btn-primary share-button" type="button" name="share-button" onclick=""> <i class="fa fa-share"></i></button>
+                        <img id="blog-image-full" src="assets/img/blog/<?php echo $blog_rows['image']; ?>" alt="" width="100%">
+                      </div>
+                    </div>
+                    <div class="col-6">
+                      <div class="blog-desc-full" id="blog-desc-full">
+                        <div class="row">
+                          <div class="col-12 text-right">
+                            <h3><?php echo $blog_rows['title'] ?></h3>
+                            <small class="text-primary">by <?php echo $blog_rows['name']; ?> | pc : <a target="_blank" href="https://instagram.com/<?php echo $blog_rows['tag']; ?>"><?php echo $blog_rows['tag']; ?></a> | <?php for ($i=5; $i <=9 ; $i++) {
+                              echo $blog_rows['date'][$i];
+                            } ?></small>
+                            <br>
+                              <p><?php echo $blog_rows['body']; ?></p>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
                 </div>
               </div>
-            </div>
-            </div>
-            <div class="col-sm-2"></div>
-          </div>
-          <br>
-      <?php  }
-        ?>
+
+              <?php
+            }
+            ?>
+            <script type="text/javascript">
+              document.getElementById('blog_thumb_cont').style.display="none";
+            </script>
+            <script type="text/javascript">
+              var img_height=document.getElementById('blog-image-full').height;
+              // alert(img_height);
+              document.getElementById('blog-desc-full').style.height=img_height+"px";
+            </script>
+            <?php
+          }
+         ?>
+        <br>
       </div>
-    </div>
-      <br><br>
-      <footer>
-    <div class="footer">
-      <p>© 2020 Copyright: ms800hub.rf.gd | by <a href="https://www.instagram.com/samartha__">Samartha</p></a>
-    </div>
-    </footer>
-    <!-- Optional JavaScript -->
-    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+
+      <br>
+
+    <?php include 'footer.php'; ?>
+    <script type="text/javascript">
+      document.getElementById('blog').classList.add('active2');
+      // document.getElementById('foo').style.position="static";
+    </script>
+    <script type="text/javascript">
+      function openBlog(id) {
+        // document.getElementById('blog_thumb_cont').style.display="none";
+        link= "blog.php?bid="+id;
+        window.location.href=link;
+      }
+      function goBackBlog(){
+        window.location.href="blog.php";
+      }
+    </script>
+
     <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
     <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
   </body>
-  <script type="text/javascript">
-    function sharelink(m) {
-      alert( 'Text copied !\nhttp://localhost/MS800hub/blog.php' +'#blog-'+ m);
-      var link = 'http://www.ms800hub/blog.php%23blog-'+ m;
-      // Create new element
-  var el = document.createElement('textarea');
-  // Set value (string to be copied)
-  el.value = link;
-  // Set non-editable to avoid focus and move outside of view
-  el.setAttribute('readonly', '');
-  el.style = {position: 'absolute', left: '-9999px'};
-  document.body.appendChild(el);
-  // Select text inside element
-  el.select();
-  // Copy text to clipboard
-  document.execCommand('copy');
-  // Remove temporary element
-  document.body.removeChild(el);
-  window.open('https://api.whatsapp.com/send?text=' + link);
-
-    }
-    function sharefb(x) {
-      var link = 'http://www.ms800hub.rf.gd/blog.php' +'#blog-'+ x;
-      window.open('https://www.facebook.com/sharer/sharer.php?u=' + link);
-    }
-  </script>
 </html>
