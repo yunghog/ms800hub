@@ -53,15 +53,16 @@ if (isset($_SESSION['user_id'])){
                       <th>Author</th>
                       <th>Date</th>
                       <th>Tag</th>
+                      <th>Delete</th>
                     </tr>
                   </thead>
                   <tbody>
                     <?php
                     if($_SESSION['role']==2){
-                      $gal_query="SELECT a.*, b.* from gallery a, users b where b.id='$user_id' and a.author_id='$user_id' and a.active=1";
+                      $gal_query="SELECT a.*, b.username from gallery a, users b where b.id='$user_id' and a.author_id='$user_id' and a.active=1";
                     }
                     if($_SESSION['role']==1){
-                      $gal_query="SELECT a.*, b.* from gallery a, users b where a.active=1 and a.author_id=b.id order by a.author_id";
+                      $gal_query="SELECT a.*, b.username from gallery a, users b where a.active=1 and a.author_id=b.id order by a.author_id";
                     }
                     $i=1;
                     $gal_exec=mysqli_query($conn,$gal_query);
@@ -75,6 +76,12 @@ if (isset($_SESSION['user_id'])){
                         <td><?php echo $gal_rows['username']; ?></td>
                         <td><?php echo $gal_rows['date']; ?></td>
                         <td><?php echo $gal_rows['tag']; ?></td>
+                        <td>
+                        <form class="" action="../assets/php/gallery_delete.php" method="post">
+                          <input type="hidden" name="gallery_id" value="<?php echo $gal_rows['id']; ?>">
+                          <button type="submit" name="delete" class="btn btn-danger"><i class="fa fa-trash"></i> </button>
+                        </form>
+                        </td>
                       </tr>
                       <?php
                       $i++;
