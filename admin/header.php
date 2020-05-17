@@ -19,6 +19,16 @@
           </a> -->
            <a href="blog.php" id="blog">Blog</a>
            <a href="user_control.php" id="user_control">User-Control</a>
+           <a href="../" id="site">Site</a>
+           <a href="../community" id="Community">Community</a>
+           <a><div class="dropdown">
+                <a href="" id="profile">Profile  <i class="fa fa-chevron-down"></i></a>
+                <div class="dropdown-content2">
+                  <a><input class="form-control2-i" type="text" name="un" value="" id="un" width="180px" placeholder="Username">  </a>
+                  <a><button type="button" name="search" onclick="openProfile()" class="btn btn-outline-primary no-margin"><i class="fa fa-search"></i> </button> </a>
+                </div>
+              </div>
+          </a>
          </div>
         </div>
         <div class="col-8 text-center">
@@ -53,4 +63,11 @@ function openNav() {
 function closeNav() {
   document.getElementById("mySidenav").style.width = "0";
 }
+</script>
+<script type="text/javascript">
+  function openProfile() {
+    var username = document.getElementById('un').value;
+    var link="../community/profile.php?un="+username;
+    window.location.href=link;
+  }
 </script>
