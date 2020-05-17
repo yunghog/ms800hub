@@ -28,9 +28,9 @@
   <li class="nav-item" id="blog">
     <a class="nav-link" href="blog.php">BLOG</a>
   </li>
-  <li class="nav-item" id="signup">
+  <!-- <li class="nav-item" id="signup">
     <a class="nav-link" href="signup.php">SIGNUP</a>
-  </li>
+  </li> -->
   <li class="nav-item" id="signin">
     <a class="nav-link" href="signin.php">SIGN IN</a>
   </li>
