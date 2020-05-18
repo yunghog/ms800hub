@@ -14,9 +14,15 @@ body{
   }
 }
 header{
+  transition: 1s;
   top: 0px;
   left: 0px;
   position: relative;
+  z-index: 24;
+}
+.sticky-header{
+  position: sticky;
+  background-color: #000000;
 }
 .logo{
   height: 40px;
@@ -680,6 +686,7 @@ position: absolute;
   color: #fff
 }
 .blog-desc-full{
+  overflow-y: scroll;
   padding: 20px;
   color: #fff;
   background-color: #000;
@@ -730,9 +737,13 @@ position: absolute;
 }
 .share-panel i{
   cursor: pointer;
-  padding: 0 20px 0 20px;
-  font-size: 22px;
+  padding: 0 10px 0 10px;
+  font-size: 24px;
   color: #00e4ff;
+  transition: 1s;
+}
+.share-panel i:hover{
+  color: #fff;
 }
 
 .blog-image-full{
