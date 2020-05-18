@@ -1,4 +1,4 @@
-<header>
+<header id="myHeader">
   <nav class="navbar navbar-expand-lg navbar-dark bg-transparent ">
 <a class="navbar-brand" href="#"><img class="logo" src="assets/img/logo.png" alt="">		</a>
 <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
@@ -38,3 +38,15 @@
 </div>
 </nav>
 </header>
+<script type="text/javascript">
+window.onscroll = function() {myFunction()};
+var header = document.getElementById("myHeader");
+var sticky = header.offsetTop+150;
+function myFunction() {
+if (window.pageYOffset > sticky) {
+  header.classList.add("sticky-header");
+} else {
+  header.classList.remove("sticky-header");
+}
+}
+</script>
