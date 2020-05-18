@@ -94,7 +94,7 @@ include 'assets/php/db_connect.php';
                         <div class="row">
                           <div class="col-12 text-right">
                             <h3><?php echo $blog_rows['title'] ?></h3>
-                            <small class="text-primary">by <?php echo $blog_rows['name']; ?> | pc : <a target="_blank" href="https://instagram.com/<?php echo $blog_rows['tag']; ?>"><?php echo $blog_rows['tag']; ?></a> | <?php for ($i=2; $i <=6 ; $i++) {
+                            <small class="text-primary">by <?php echo $blog_rows['name']; ?> | pc : <a target="_blank" href="https://instagram.com/<?php echo $blog_rows['tag']; ?>"><?php echo $blog_rows['tag']; ?></a> | <?php for ($i=5; $i <=9 ; $i++) {
                               echo $blog_rows['date'][$i];
                             } ?></small>
                             <br>
