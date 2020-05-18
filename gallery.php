@@ -92,6 +92,8 @@ include 'assets/php/db_connect.php';
         document.getElementById('author').innerHTML="by "+args[1]+"  "+args[3].split('-')[1]+'/'+args[3].split('-')[2];
         document.getElementById('tag').innerHTML="<a style='font-size:12px;' href='https://instagram.com/"+args[4]+"' target='_blank'>"+args[4]+"</a>";
           // document.getElementById('caption').innerHTML=args[0];
+          document.body.scrollTop = 0;
+        document.documentElement.scrollTop = 0;
       }
       function closeGalleryModel() {
         document.getElementById('overlay-model').style.display='none';
