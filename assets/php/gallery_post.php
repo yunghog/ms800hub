@@ -11,7 +11,7 @@ include 'db_connect.php';
       $file_tmp =$_FILES['image']['tmp_name'];
       $file_type=$_FILES['image']['type'];
       $file_ext=strtolower(end(explode('.',$_FILES['image']['name'])));
-      $today=date('d-m-y');
+      $today=date('y-m-d');
       $time=time();
       $file_name=$time.'.'.$file_ext;
       $extensions= array("jpeg","jpg","png");
