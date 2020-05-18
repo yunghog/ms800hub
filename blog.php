@@ -77,19 +77,24 @@ include 'assets/php/db_connect.php';
               <div class="container">
                 <div class="blog-full">
                 <div class="row no-gutters">
-                    <div class="col-6">
+                    <div class="col-md-6">
                       <div class="blog-image-full" >
                         <button class="btn btn-primary back-button" type="button" name="back-button" onclick="goBackBlog()"> <i class="fa fa-arrow-left"></i></button>
-                        <button class="btn btn-primary share-button" type="button" name="share-button" onclick=""> <i class="fa fa-share"></i></button>
+                        <button class="btn btn-primary share-button" type="button" name="share-button" onclick="openShare()"> <i class="fa fa-share"></i></button>
+                        <div class="share-panel" id="share-panel">
+                          <i class="fa fa-facebook" onclick="share('facebook')"></i>
+                          <i class="fa fa-whatsapp" onclick="share('whatsapp')"></i>
+                          <i class="fa fa-link" onclick="share('link')"></i>
+                        </div>
                         <img id="blog-image-full" src="assets/img/blog/<?php echo $blog_rows['image']; ?>" alt="" width="100%">
                       </div>
                     </div>
-                    <div class="col-6">
+                    <div class="col-md-6">
                       <div class="blog-desc-full" id="blog-desc-full">
                         <div class="row">
                           <div class="col-12 text-right">
                             <h3><?php echo $blog_rows['title'] ?></h3>
-                            <small class="text-primary">by <?php echo $blog_rows['name']; ?> | pc : <a target="_blank" href="https://instagram.com/<?php echo $blog_rows['tag']; ?>"><?php echo $blog_rows['tag']; ?></a> | <?php for ($i=5; $i <=9 ; $i++) {
+                            <small class="text-primary">by <?php echo $blog_rows['name']; ?> | pc : <a target="_blank" href="https://instagram.com/<?php echo $blog_rows['tag']; ?>"><?php echo $blog_rows['tag']; ?></a> | <?php for ($i=2; $i <=6 ; $i++) {
                               echo $blog_rows['date'][$i];
                             } ?></small>
                             <br>
@@ -109,9 +114,50 @@ include 'assets/php/db_connect.php';
               document.getElementById('blog_thumb_cont').style.display="none";
             </script>
             <script type="text/javascript">
-              var img_height=document.getElementById('blog-image-full').height;
-              // alert(img_height);
-              document.getElementById('blog-desc-full').style.height=img_height+"px";
+              if(screen.width>760){
+                var img_height=document.getElementById('blog-image-full').height;
+                // alert(img_height);
+                document.getElementById('blog-desc-full').style.height=img_height+"px";
+              }
+            </script>
+            <script type="text/javascript">
+              function openShare(){
+                var sharepanel=document.getElementById('share-panel');
+                if(sharepanel.style.visibility=="visible"){
+                  sharepanel.style.height="0px";
+                  sharepanel.style.opacity="0";
+                  sharepanel.style.visibility="hidden";
+                }
+                else{
+                  sharepanel.style.visibility="visible";
+                  sharepanel.style.height="35px";
+                  sharepanel.style.opacity="1";
+                }
+              }
+              function share(arg){
+                // alert(window.location);
+                link=window.location;
+                if(arg=='facebook'){
+                  window.open('https://www.facebook.com/sharer/sharer.php?u=' + link, 'facebook-popup', 'height=350,width=600');
+                }
+                if(arg=='whatsapp'){
+                  link='https://web.whatsapp.com/send?text=%20' + link;
+                  window.open(link);
+                }
+                if(arg=='link'){
+                  var x=document.createElement('input');
+                  x.value=link;
+                  x.style.position = 'absolute';
+                  x.style.left = '-9999px';
+                  document.body.appendChild(x);
+                  x.select();
+                  document.execCommand('copy');
+                  document.body.removeChild(x);
+                  window.alert('link copied : '+ link);
+                  // window.prompt("Copy to clipboard: Ctrl+C, Enter", link);
+                }
+                openShare();
+              }
             </script>
             <?php
           }
