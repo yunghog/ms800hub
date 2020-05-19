@@ -17,7 +17,7 @@ header{
   transition: 1s;
   top: 0px;
   left: 0px;
-  position: relative;
+  /* position: relative; */
   z-index: 24;
 }
 .sticky-header{
