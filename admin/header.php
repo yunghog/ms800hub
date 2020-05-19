@@ -18,6 +18,7 @@
               </div>
           </a> -->
            <a href="blog.php" id="blog">Blog</a>
+           <a href="events.php" id="events">Events</a>
            <a href="user_control.php" id="user_control">User-Control</a>
            <a href="../" id="site">Site</a>
            <a href="../community" id="Community">Community</a>
