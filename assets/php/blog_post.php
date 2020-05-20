@@ -31,6 +31,10 @@ include 'db_connect.php';
          //$query="INSERT INTO `gallery` (`image`) VALUES ('$target')";
          $query="INSERT INTO `blog`(`image`, `author_id`, `title`, `body`, `date`, `tag`) VALUES ('$target','$user_id','$title','$body','$today','$tag')";
          $exec=mysqli_query($conn,$query);
+         copy("../img/blog/"."blog_image_".$user_id.$file_name,"../img/gallery/"."gal_image_".$user_id.$file_name);
+         $target2="gal_image_".$user_id.$file_name;
+         $query2="INSERT INTO `gallery`(`image`, `author_id`, `caption`,`date`, `tag`) VALUES ('$target2','$user_id','$title','$today','$tag')";
+         $exec2=mysqli_query($conn,$query2);
          ?>
          <script type="text/javascript">
            alert('Uploaded successfully');
