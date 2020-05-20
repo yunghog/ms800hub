@@ -19,6 +19,9 @@ include 'assets/php/db_connect.php';
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="assets/css/bootstrap.min.css">
     <link rel="stylesheet" type="text/css" href="assets/css/styles.css">
+    <!-- jquery -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+
   </head>
 	<body background="assets/img/bg.jpg">
     <?php include 'header.php'; ?>
@@ -38,11 +41,11 @@ include 'assets/php/db_connect.php';
           <div class="container">
             <div class="row gallery no-gutters">
               <?php
-              $gal_query="SELECT a.*, b.* from gallery a, users b where a.active=1 and a.author_id=b.id order by a.date";
+              $gal_query="SELECT a.*, b.username from gallery a, users b where a.active=1 and a.author_id=b.id order by a.date";
               // echo $gal_query;
               $gal_exec=mysqli_query($conn,$gal_query);
               while($gal_rows=mysqli_fetch_array($gal_exec)){
-                $args=$gal_rows['image'].'%'.$gal_rows['username'].'%'.$gal_rows['caption'].'%'.$gal_rows['date'].'%'.$gal_rows['tag'];
+                $args=$gal_rows['image'].'%'.$gal_rows['username'].'%'.$gal_rows['caption'].'%'.$gal_rows['date'].'%'.$gal_rows['tag'].'%'.$gal_rows['id'];
                 // echo $args;
                 ?>
               <div class="col-md-3 bg-black align-items-center">
@@ -65,6 +68,17 @@ include 'assets/php/db_connect.php';
                 <div class="card bg-black" id="<?php echo $gal_rows['image'] ?>">
                   <img id="image" src="" class="card-img-top" alt="...">
                   <div class="card-body">
+                    <div class="like-panel">
+                        <i class="fa fa-heart" id=like onclick="like_gal()"></i>
+                        <i class="fa fa-share" onclick="openShare()"></i>
+                        <a href="" id="dlLink" download><i class="fa fa-download"></i> </a>
+                        <div class="share-panel share-panel-2" id="share-panel">
+                          <input type="hidden" id='gid' value="">
+                          <i class="fa fa-facebook" onclick="share('facebook')"></i>
+                          <i class="fa fa-whatsapp" onclick="share('whatsapp')"></i>
+                          <i class="fa fa-link" onclick="share('link')"></i>
+                        </div>
+                    </div>
                     <h5 class="card-title" id="caption"></h5>
                     <!-- <p class="card-text">20yo developer and music producer based in Sagar. Passionate about cars. Highly influenced by Dad's car workshop 'Aditya Automobiles'.</p> -->
                     <p class="card-text"><small class="text-muted" id="author"></small> | <small class="text-muted text-primary" id="tag"></small></p>
@@ -76,6 +90,24 @@ include 'assets/php/db_connect.php';
         </section>
         <br>
       </div>
+      <?php
+      if (isset($_GET['gid'])) {
+        $gid=$_GET['gid'];
+        echo $gid;
+        $gal_query2="SELECT a.*, b.username from gallery a, users b where a.active=1 and a.author_id=b.id and a.id='$gid' order by a.date desc";
+        // echo $gal_query;
+        $gal_exec2=mysqli_query($conn,$gal_query2);
+        while($gal_rows2=mysqli_fetch_array($gal_exec2)){
+          $args2=$gal_rows2['image'].'%'.$gal_rows2['username'].'%'.$gal_rows2['caption'].'%'.$gal_rows2['date'].'%'.$gal_rows2['tag'].'%'.$gal_rows2['id'];
+          echo $args2;
+          ?>
+          <script type="text/javascript">
+          $( document ).ready(function() {
+              openGalleryModel( "<?php echo $args2; ?>" );
+          });          </script>
+          <?php
+        }
+      } ?>
       <br>
     <?php include 'footer.php'; ?>
     <script type="text/javascript">
@@ -91,12 +123,63 @@ include 'assets/php/db_connect.php';
         document.getElementById('caption').innerHTML=args[2];
         document.getElementById('author').innerHTML="by "+args[1]+"  "+args[3].split('-')[1]+'/'+args[3].split('-')[2];
         document.getElementById('tag').innerHTML="<a style='font-size:12px;' href='https://instagram.com/"+args[4]+"' target='_blank'>"+args[4]+"</a>";
+        document.getElementById('gid').setAttribute("value",args[5]);
+        document.getElementById('dlLink').setAttribute("href",image_src);
           // document.getElementById('caption').innerHTML=args[0];
           document.body.scrollTop = 0;
         document.documentElement.scrollTop = 0;
       }
       function closeGalleryModel() {
         document.getElementById('overlay-model').style.display='none';
+        var sharepanel=document.getElementById('share-panel');
+        sharepanel.style.height="0px";
+        sharepanel.style.opacity="0";
+        sharepanel.style.visibility="hidden";
+      }
+    </script>
+    <script type="text/javascript">
+      function openShare(){
+        var sharepanel=document.getElementById('share-panel');
+        if(sharepanel.style.visibility=="visible"){
+          sharepanel.style.height="0px";
+          sharepanel.style.opacity="0";
+          sharepanel.style.visibility="hidden";
+        }
+        else{
+          sharepanel.style.visibility="visible";
+          sharepanel.style.height="35px";
+          sharepanel.style.opacity="1";
+        }
+      }
+      function share(arg){
+        // alert(window.location);
+        // link=window.location;
+        gid=document.getElementById('gid').value;
+        link="http://ms800hub.rf.gd/gallery.php?gid="+gid;
+        if(arg=='facebook'){
+          window.open('https://www.facebook.com/sharer/sharer.php?u=' + link, 'facebook-popup', 'height=350,width=600');
+        }
+        if(arg=='whatsapp'){
+          link='https://api.whatsapp.com/send?text=%20' + link;
+          window.open(link);
+        }
+        if(arg=='link'){
+          var x=document.createElement('input');
+          x.value=link;
+          x.style.position = 'absolute';
+          x.style.left = '-9999px';
+          document.body.appendChild(x);
+          x.select();
+          document.execCommand('copy');
+          document.body.removeChild(x);
+          window.alert('link copied : '+ link);
+          // window.prompt("Copy to clipboard: Ctrl+C, Enter", link);
+        }
+        openShare();
+      }
+      function like_gal(){
+        // console.log(window.this);
+        document.getElementById('like').style.color="#00e4ff";
       }
     </script>
     <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
