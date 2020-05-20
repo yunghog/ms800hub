@@ -725,6 +725,10 @@ position: absolute;
   border: 1px solid #00e4ff;
   padding: 5px;
 }
+.share-panel-2{
+  right: 0;
+  top: 0 !important;
+}
 .share-panel::before{
   visibility: visible;
   font-family: "FontAwesome";
@@ -735,6 +739,14 @@ position: absolute;
   font-size: 22px;
   color: #00e4ff;
 }
+.like-button{
+  position: absolute;
+  bottom: 10px;
+  right: 10px;
+}
+.fb-like{
+
+}
 .share-panel i{
   cursor: pointer;
   padding: 0 10px 0 10px;
@@ -743,6 +755,13 @@ position: absolute;
   transition: 1s;
 }
 .share-panel i:hover{
+  color: #fff;
+}
+.like-panel i{
+  transition: 1s;
+  padding: 0 15px 0 0px;
+  font-size: 24px;
+  cursor: pointer;
   color: #fff;
 }
 
