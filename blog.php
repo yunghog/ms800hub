@@ -21,6 +21,8 @@ include 'assets/php/db_connect.php';
     <link rel="stylesheet" type="text/css" href="assets/css/styles.css">
   </head>
 	<body background="assets/img/bg.jpg">
+    <div id="fb-root"></div>
+    <script async defer crossorigin="anonymous" src="https://connect.facebook.net/en_GB/sdk.js#xfbml=1&version=v7.0&appId=877989645977649&autoLogAppEvents=1"></script>
     <?php include 'header.php'; ?>
 <br>
   <div class="content">
@@ -86,6 +88,9 @@ include 'assets/php/db_connect.php';
                           <i class="fa fa-whatsapp" onclick="share('whatsapp')"></i>
                           <i class="fa fa-link" onclick="share('link')"></i>
                         </div>
+                        <div class="like-button">
+                          <div class="fb-like" data-href="http://www.ms800hub.rf.gd/blog.php?bid=<?php echo $id ; ?>" data-width="" data-layout="button_count" data-action="like" data-size="small" data-share="false"></div>
+                        </div>
                         <img id="blog-image-full" src="assets/img/blog/<?php echo $blog_rows['image']; ?>" alt="" width="100%">
                       </div>
                     </div>
@@ -113,6 +118,7 @@ include 'assets/php/db_connect.php';
             <script type="text/javascript">
               document.getElementById('blog_thumb_cont').style.display="none";
             </script>
+
             <script type="text/javascript">
               if(screen.width>760){
                 var img_height=document.getElementById('blog-image-full').height;
