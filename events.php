@@ -197,7 +197,6 @@ include 'assets/php/db_connect.php';
             </div>
           </div>
         </section>
-
         <br>
         <section class="full-section"  id="fade">
           <div class="container">
