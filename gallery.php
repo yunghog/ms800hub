@@ -69,9 +69,8 @@ include 'assets/php/db_connect.php';
                   <img id="image" src="" class="card-img-top" alt="...">
                   <div class="card-body">
                     <div class="like-panel">
-                        <i class="fa fa-heart" id=like onclick="like_gal()"></i>
-                        <i class="fa fa-share" onclick="openShare()"></i>
-                        <a href="" id="dlLink" download><i class="fa fa-download"></i> </a>
+                        <!-- <i class="fa fa-heart" id=like onclick="like_gal()"></i> -->
+                        <!-- <a href="" id="dlLink" download><i class="fa fa-download"></i> </a> -->
                         <div class="share-panel share-panel-2" id="share-panel">
                           <input type="hidden" id='gid' value="">
                           <i class="fa fa-facebook" onclick="share('facebook')"></i>
@@ -79,8 +78,14 @@ include 'assets/php/db_connect.php';
                           <i class="fa fa-link" onclick="share('link')"></i>
                         </div>
                     </div>
-                    <h5 class="card-title" id="caption"></h5>
-                    <!-- <p class="card-text">20yo developer and music producer based in Sagar. Passionate about cars. Highly influenced by Dad's car workshop 'Aditya Automobiles'.</p> -->
+                    <div class="row">
+                      <div class="col-10">
+                        <h5 class="card-title" id="caption"></h5>
+                      </div>
+                      <div class="col-2 text-right">
+                        <i class="fa fa-share" onclick="openShare()"></i>
+                      </div>
+                    </div>
                     <p class="card-text"><small class="text-muted" id="author"></small> | <small class="text-muted text-primary" id="tag"></small></p>
                   </div>
                 </div>
@@ -126,8 +131,8 @@ include 'assets/php/db_connect.php';
         document.getElementById('gid').setAttribute("value",args[5]);
         document.getElementById('dlLink').setAttribute("href",image_src);
           // document.getElementById('caption').innerHTML=args[0];
-          document.body.scrollTop = 0;
-        document.documentElement.scrollTop = 0;
+          // document.body.scrollTop = 0;
+        // document.documentElement.scrollTop = 0;
       }
       function closeGalleryModel() {
         document.getElementById('overlay-model').style.display='none';

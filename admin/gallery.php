@@ -32,7 +32,10 @@ if (isset($_SESSION['user_id'])){
         <!-- DataTable -->
         <link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/v/bs4/jq-3.3.1/dt-1.10.21/datatables.min.css"/>
         <script type="text/javascript" src="https://cdn.datatables.net/v/bs4/jq-3.3.1/dt-1.10.21/datatables.min.js"></script>
-
+        <!-- lightbox -->
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/ekko-lightbox/5.3.0/ekko-lightbox.js" integrity="sha512-YibiFIKqwi6sZFfPm5HNHQYemJwFbyyYHjrr3UT+VobMt/YBo1kBxgui5RWc4C3B4RJMYCdCAJkbXHt+irKfSA==" crossorigin="anonymous"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/ekko-lightbox/5.3.0/ekko-lightbox.min.js" integrity="sha512-Y2IiVZeaBwXG1wSV7f13plqlmFOx8MdjuHyYFVoYzhyRr3nH/NMDjTBSswijzADdNzMyWNetbLMfOpIPl6Cv9g==" crossorigin="anonymous"></script>
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/ekko-lightbox/5.3.0/ekko-lightbox.css" integrity="sha512-Velp0ebMKjcd9RiCoaHhLXkR1sFoCCWXNp6w4zj1hfMifYB5441C+sKeBl/T/Ka6NjBiRfBBQRaQq65ekYz3UQ==" crossorigin="anonymous" />
       </head>
     	<body background="../assets/img/bg.jpg">
         <?php include 'header.php'; ?>
@@ -40,12 +43,78 @@ if (isset($_SESSION['user_id'])){
         <div class="content" id="fade">
           <div class="container">
             <div class="row">
-              <div class="col-md-12">
+              <div class="col-md-10">
                 <h1 class="big-text">Gallery Panel</h1>
-                <!-- <h3 class="tag">Welcome Admin : <?php echo $username; ?></h3> -->
+                <h3 class="tag">Welcome Admin : <?php echo $username; ?></h3>
+              </div>
+              <div class="col-md-2">
+                <a href="#post_form" class="btn btn-primary">Upload</a>
               </div>
             </div>
             <br>
+            <div class="row no-gutters justify-content-center">
+              <?php
+              if($_SESSION['role']==2){
+                $gal_query2="SELECT a.*, b.username from gallery a, users b where b.id='$user_id' and a.author_id='$user_id' and a.active=1";
+              }
+              if($_SESSION['role']==1){
+                $gal_query2="SELECT a.*, b.username from gallery a, users b where a.active=1 and a.author_id=b.id order by a.author_id";
+              }
+              $gal_exec2=mysqli_query($conn,$gal_query2);
+              while($gal_rows2=mysqli_fetch_array($gal_exec2)){
+                ?>
+                <div class="col-md-3">
+                  <div class="">
+                    <a href="../assets/img/gallery/<?php echo $gal_rows2["image"]; ?>" data-toggle="lightbox" data-gallery="example-gallery">
+                      <img src="../assets/img/gallery/<?php echo $gal_rows2["image"]; ?>" class="img-fluid">
+                      <h1 class="text-primary"><span></span></h1>
+                    </a>
+                  </div>
+                </div>
+                <?php
+              }
+               ?>
+            </div>
+          </div>
+          <br>
+          <div class="container" id="post_form">
+            <div class="row">
+              <div class="col-md-12">
+                <h3 class="tag">Post a Gallery Image</h3>
+              </div>
+            </div>
+              <br>
+              <div class="row" >
+                <div class="col-md-12">
+                  <form class="form-control2" action="../assets/php/gallery_post.php" method="post" enctype="multipart/form-data">
+                    <div class="row">
+                      <div class="col-12">
+                        <input type="file" name="image" value="" placeholder="Select Image">
+                      </div>
+                    </div>
+                    <br>
+                    <div class="row">
+                      <div class="col-12">
+                        <textarea name="caption" rows="3"  placeholder="Caption!!!"></textarea>
+                      </div>
+                    </div>
+                    <br>
+                    <div class="row">
+                      <div class="col-9">
+                        <input type="text" name="tag" value="" placeholder="tag">
+                      </div>
+                      <div class="col-3 text-center">
+                        <button type="submit" name="post_gallery" class="btn btn-primary">Post</button>
+                      </div>
+                    </div>
+                    <br>
+                  </form>
+                </div>
+              </div>
+          </div>
+        </div>
+        <br>
+          <div class="container">
             <div class="row">
               <div class="col-md-12 table-column text-primary">
                 <table class="table table-dark " id="gallery-table">
@@ -95,43 +164,8 @@ if (isset($_SESSION['user_id'])){
                 </table>
               </div>
             </div>
-            <br>
-            <div class="row">
-              <div class="col-md-12">
-                <h3 class="tag">Post a Gallery Image</h3>
-              </div>
-            </div>
-              <br>
-              <div class="row">
-                <div class="col-md-12">
-                  <form class="form-control2" action="../assets/php/gallery_post.php" method="post" enctype="multipart/form-data">
-                    <div class="row">
-                      <div class="col-12">
-                        <input type="file" name="image" value="" placeholder="Select Image">
-                      </div>
-                    </div>
-                    <br>
-                    <div class="row">
-                      <div class="col-12">
-                        <textarea name="caption" rows="3"  placeholder="Caption!!!"></textarea>
-                      </div>
-                    </div>
-                    <br>
-                    <div class="row">
-                      <div class="col-9">
-                        <input type="text" name="tag" value="" placeholder="tag">
-                      </div>
-                      <div class="col-3 text-center">
-                        <button type="submit" name="post_gallery" class="btn btn-primary">Post</button>
-                      </div>
-                    </div>
-                    <br>
-                  </form>
-                </div>
-              </div>
           </div>
-        </div>
-        <br><br><br>
+        <br><br>
         <?php include 'footer.php'; ?>
         <script type="text/javascript">
           document.getElementById('index').classList.add('active2');
@@ -143,6 +177,23 @@ if (isset($_SESSION['user_id'])){
         "responsive":   true,
     } );
 } );
+        </script>
+        <script type="text/javascript">
+        $(document).on('click', '[data-toggle="lightbox"]', function(event) {
+              event.preventDefault();
+              $(this).ekkoLightbox();
+              var options = $(this).find("h1");
+              options.innerHTML="fuggggga";
+          });
+        </script>
+        <script type="text/javascript">
+          var modal = document.getElementById('ekkoLightbox-556');
+          var node = document.createElement("div");
+          var h1 = document.createElement("h1");
+          node.classList.add("modal-overlay");
+          node.appendChild(h1);
+          h1.innerHTML="fuuuuuu";
+          modal.appendChild(node);
         </script>
         <!-- <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script> -->
         <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
