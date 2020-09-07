@@ -69,12 +69,12 @@
         <div class="row">
             <?php
             include 'assets/php/db_connect.php';
-            $feed_query="SELECT a.*, b.name, b.username from blog a, users b where a.active=1 and a.author_id=b.id order by a.image desc limit 2";
+            $feed_query="SELECT a.*, b.name, b.username from blog a, users b where a.active=1 and a.author_id=b.id order by a.image desc limit 3";
             $feed_exec=mysqli_query($conn,$feed_query);
             while($feed_row=mysqli_fetch_array($feed_exec)){
               $i=$feed_row["id"];
               ?>
-                <div class="col-md-6">
+                <div class="col-md-4">
                   <div class="feed-card">
                     <div class="feed-card-img">
                       <img src="assets/img/blog/<?php echo $feed_row["image"] ?>" alt="Card image cap">
@@ -94,35 +94,6 @@
                 </div><?php } ?>
               </div>
               <br>
-              <div class="row">
-                <?php
-                $feed_query2="SELECT a.*, b.name, b.username from blog a, users b where a.active=1 and a.author_id=b.id and a.id!='$i' order by a.image desc limit 4";
-                $feed_exec2=mysqli_query($conn,$feed_query2);
-                $feed_titles=[];
-                $n=0;
-                while($feed_row2=mysqli_fetch_array($feed_exec2)){
-                  $feed_titles[$n]=$feed_row2["title"];
-                  $n++; ?>
-                <div class="col-md-3">
-                  <a href="blog.php?bid=<?php echo $feed_row2["id"] ?>">
-                    <div class="feed-thumb">
-                      <div class="row no-gutters">
-                        <div class="col-5">
-                          <div class="feed-thumb-img">
-                            <img src="assets/img/blog/<?php echo $feed_row2['image']; ?>" alt="feed-thumb">
-                          </div>
-                        </div>
-                        <div class="col-7">
-                          <div class="feed-thumb-body">
-                            <p><?php echo $feed_row2['title']; ?></p>
-                          </div>
-                        </div>
-                      </div>
-                    </div>
-                  </a>
-                </div>
-                <?php } ?>
-              </div>
               <br>
             </div>
           </div>
