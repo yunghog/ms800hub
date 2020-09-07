@@ -45,8 +45,10 @@ var sticky = header.offsetTop+150;
 function myFunction() {
 if (window.pageYOffset > sticky) {
   header.classList.add("sticky-header");
+  header.style.top="0px";
 } else {
   header.classList.remove("sticky-header");
+  header.style.top="-5rem";
 }
 }
 </script>

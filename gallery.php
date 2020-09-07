@@ -41,7 +41,7 @@ include 'assets/php/db_connect.php';
           <div class="container">
             <div class="row gallery no-gutters">
               <?php
-              $gal_query="SELECT a.*, b.username from gallery a, users b where a.active=1 and a.author_id=b.id order by a.date";
+              $gal_query="SELECT a.*, b.username from gallery a, users b where a.active=1 and a.author_id=b.id order by a.date desc ";
               // echo $gal_query;
               $gal_exec=mysqli_query($conn,$gal_query);
               while($gal_rows=mysqli_fetch_array($gal_exec)){
