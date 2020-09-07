@@ -55,7 +55,81 @@
       </div>
     </section>
     <section class="full-page-section" id="feed_section">
-
+      <br><br><br>
+      <div class="container">
+        <div class="row">
+          <div class="col-md-12 text-center">
+            <h2 class="big-text">FEED</h2>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-md-7">
+            <?php
+            include 'assets/php/db_connect.php';
+            $feed_query="SELECT a.*, b.name, b.username from blog a, users b where a.active=1 and a.author_id=b.id order by a.date desc limit 3";
+            $feed_exec=mysqli_query($conn,$feed_query);
+            $i=1;
+            while($feed_row=mysqli_fetch_array($feed_exec))
+            {
+              if($i==1){
+                  ?>
+                  <div class="row">
+                    <div class="col-md-12">
+                      <a href="blog.php?bid=<?php echo $feed_row["id"] ?>">
+                        <div class="blog-thumb">
+                          <div class="row no-gutters">
+                            <div class="col-12">
+                              <div class="blog-image">
+                                <img src="assets/img/blog/<?php echo $feed_row['image']; ?>" alt="" height="100%">
+                              </div>
+                            </div>
+                          </div>
+                          <div class="row">
+                            <div class="col-12">
+                              <div class="blog-desc">
+                                <h5><?php echo $feed_row['title']; ?></h5>
+                                <p>by <?php echo $feed_row['name']; ?> <br> pc : <?php echo $feed_row['tag']; ?><br> <?php echo $feed_row['date']; ?> </p>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                      </a>
+                    </div>
+                  </div>
+                  <br>
+                  <div class="row">
+                  <?php
+                  $i++;
+              }
+              if($i>1){
+                ?>
+                <div class="col-md-6">
+                  <a href="blog.php?bid=<?php echo $feed_row["id"] ?>">
+                    <div class="blog-thumb">
+                      <div class="row no-gutters">
+                        <div class="col-5">
+                          <div class="blog-image">
+                            <img src="assets/img/blog/<?php echo $feed_row['image']; ?>" alt="" height="100%">
+                          </div>
+                        </div>
+                        <div class="col-7">
+                          <div class="blog-desc">
+                            <h5><?php echo $feed_row['title']; ?></h5>
+                            <p>by <?php echo $feed_row['name']; ?> <br> pc : <?php echo $feed_row['tag']; ?><br> <?php echo $feed_row['date']; ?> </p>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </a>
+                </div>
+                <?php
+              }
+            }
+            ?>
+            </div>
+          </div>
+        </div>
+      </div>
     </section>
     </div>
     <br>
