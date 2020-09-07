@@ -18,6 +18,10 @@
   <link rel="stylesheet" type="text/css" href="assets/css/styles.css">
   <!-- <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css"> -->
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <!-- lightbox -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/ekko-lightbox/5.3.0/ekko-lightbox.js" integrity="sha512-YibiFIKqwi6sZFfPm5HNHQYemJwFbyyYHjrr3UT+VobMt/YBo1kBxgui5RWc4C3B4RJMYCdCAJkbXHt+irKfSA==" crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/ekko-lightbox/5.3.0/ekko-lightbox.min.js" integrity="sha512-Y2IiVZeaBwXG1wSV7f13plqlmFOx8MdjuHyYFVoYzhyRr3nH/NMDjTBSswijzADdNzMyWNetbLMfOpIPl6Cv9g==" crossorigin="anonymous"></script>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/ekko-lightbox/5.3.0/ekko-lightbox.css" integrity="sha512-Velp0ebMKjcd9RiCoaHhLXkR1sFoCCWXNp6w4zj1hfMifYB5441C+sKeBl/T/Ka6NjBiRfBBQRaQq65ekYz3UQ==" crossorigin="anonymous" />
 </head>
 <body background="assets/img/bg.jpg">
   <?php include 'header.php'; ?>
@@ -54,7 +58,7 @@
           </a>
       </div>
     </section>
-    <section class="full-page-section" id="feed_section">
+    <section id="feed_section">
       <br><br><br>
       <div class="container">
         <div class="row">
@@ -63,69 +67,63 @@
           </div>
         </div>
         <div class="row">
-          <div class="col-md-7">
             <?php
             include 'assets/php/db_connect.php';
-            $feed_query="SELECT a.*, b.name, b.username from blog a, users b where a.active=1 and a.author_id=b.id order by a.date desc limit 3";
+            $feed_query="SELECT a.*, b.name, b.username from blog a, users b where a.active=1 and a.author_id=b.id order by a.image desc limit 2";
             $feed_exec=mysqli_query($conn,$feed_query);
-            $i=1;
-            while($feed_row=mysqli_fetch_array($feed_exec))
-            {
-              if($i==1){
-                  ?>
-                  <div class="row">
-                    <div class="col-md-12">
-                      <a href="blog.php?bid=<?php echo $feed_row["id"] ?>">
-                        <div class="blog-thumb">
-                          <div class="row no-gutters">
-                            <div class="col-12">
-                              <div class="blog-image">
-                                <img src="assets/img/blog/<?php echo $feed_row['image']; ?>" alt="" height="100%">
-                              </div>
-                            </div>
-                          </div>
-                          <div class="row">
-                            <div class="col-12">
-                              <div class="blog-desc">
-                                <h5><?php echo $feed_row['title']; ?></h5>
-                                <p>by <?php echo $feed_row['name']; ?> <br> pc : <?php echo $feed_row['tag']; ?><br> <?php echo $feed_row['date']; ?> </p>
-                              </div>
-                            </div>
-                          </div>
+            while($feed_row=mysqli_fetch_array($feed_exec)){
+              $i=$feed_row["id"];
+              ?>
+                <div class="col-md-6">
+                  <div class="feed-card">
+                    <div class="feed-card-img">
+                      <img src="assets/img/blog/<?php echo $feed_row["image"] ?>" alt="Card image cap">
+                    </div>
+                    <div class="feed-card-body">
+                      <div class="row">
+                        <div class="col-9">
+                          <h5>Latest Post</h5>
+                          <p><?php echo $feed_row["title"] ?></p>
                         </div>
-                      </a>
+                        <div class="col-3 text-center">
+                          <a href="blog.php?bid=<?php echo $feed_row["id"] ?>" class="btn btn-primary">Read more</a>
+                        </div>
+                      </div>
                     </div>
                   </div>
-                  <br>
-                  <div class="row">
-                  <?php
-                  $i++;
-              }
-              if($i>1){
-                ?>
-                <div class="col-md-6">
-                  <a href="blog.php?bid=<?php echo $feed_row["id"] ?>">
-                    <div class="blog-thumb">
+                </div><?php } ?>
+              </div>
+              <br>
+              <div class="row">
+                <?php
+                $feed_query2="SELECT a.*, b.name, b.username from blog a, users b where a.active=1 and a.author_id=b.id and a.id!='$i' order by a.image desc limit 4";
+                $feed_exec2=mysqli_query($conn,$feed_query2);
+                $feed_titles=[];
+                $n=0;
+                while($feed_row2=mysqli_fetch_array($feed_exec2)){
+                  $feed_titles[$n]=$feed_row2["title"];
+                  $n++; ?>
+                <div class="col-md-3">
+                  <a href="blog.php?bid=<?php echo $feed_row2["id"] ?>">
+                    <div class="feed-thumb">
                       <div class="row no-gutters">
                         <div class="col-5">
-                          <div class="blog-image">
-                            <img src="assets/img/blog/<?php echo $feed_row['image']; ?>" alt="" height="100%">
+                          <div class="feed-thumb-img">
+                            <img src="assets/img/blog/<?php echo $feed_row2['image']; ?>" alt="feed-thumb">
                           </div>
                         </div>
                         <div class="col-7">
-                          <div class="blog-desc">
-                            <h5><?php echo $feed_row['title']; ?></h5>
-                            <p>by <?php echo $feed_row['name']; ?> <br> pc : <?php echo $feed_row['tag']; ?><br> <?php echo $feed_row['date']; ?> </p>
+                          <div class="feed-thumb-body">
+                            <p><?php echo $feed_row2['title']; ?></p>
                           </div>
                         </div>
                       </div>
                     </div>
                   </a>
                 </div>
-                <?php
-              }
-            }
-            ?>
+                <?php } ?>
+              </div>
+              <br>
             </div>
           </div>
         </div>
@@ -151,6 +149,12 @@
         }
       });
     });
+</script>
+<script type="text/javascript">
+$(document).on('click', '[data-toggle="lightbox"]', function(event) {
+      event.preventDefault();
+      $(this).ekkoLightbox();
+  });
 </script>
     <!-- Optional JavaScript -->
     <!-- jQuery first, then Popper.js, then Bootstrap JS -->

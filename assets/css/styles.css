@@ -4,9 +4,10 @@ body{
   background-size: 100%;
 	background-repeat: no-repeat;
 	background-color: rgba(0,0,0,.5) !important;
-  font-family: 'Lexend Deca', sans-serif;
+  font-family: 'Lexend Deca';
   min-height: 100vh;
   position: relative;
+  color: #fff;
 }
 @media(max-width:768px){
   body{
@@ -44,7 +45,7 @@ footer {
   padding-top: 10px;
   bottom: 0px;
   position: absolute;
-  height: 5rem;
+  height: 3rem;
   font-family: 'Lexend Deca', sans-serif;
   width: 100%;
   background-color: rgba(0,0,0,.8);
@@ -52,7 +53,7 @@ footer {
   font-size: 12px;
 }
 .content{
-  padding-bottom: 5rem;
+  padding-bottom: 3rem;
 }
 a{
   text-decoration: none !important;
@@ -861,4 +862,47 @@ p{
   position: absolute;
   left: 50%;
   top: 600px;
+}
+.feed-card{
+  width: 100%;
+  margin: 10px;
+  background-color: #000;
+  border: 1px solid #00e4ff;
+  border-radius: 20px;
+  overflow: hidden;
+}
+.feed-card-img{
+  width: 100%;
+  overflow: hidden;
+  max-height: 250px;
+}
+.feed-card-img img{
+  width: 100%;
+}
+.feed-card-body{
+  padding: 10px;
+}
+.feed-thumb{
+  width: 100%;
+  margin: 10px;
+  background-color: #000;
+  border-radius: 20px;
+  overflow: hidden;
+  border: 1px solid #00e4ff;
+}
+.feed-thumb-img{
+  width: 100%;
+  overflow: hidden;
+}
+.feed-thumb-img img{
+  width: 100%;
+}
+.feed-thumb-body{
+  padding: 10px;
+}
+a{
+  color: inherit;
+}
+a:hover{
+  color: inherit;
 }
