@@ -23,12 +23,11 @@
   <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
 
 </head>
-<body background="assets/img/bg.jpg">
+<body>
   <?php include 'header.php'; ?>
-  <br>
   <div class="content">
-    <section class="full-page-section">
-      <div class="container">
+    <section class="full-page-section bg-image">
+      <div class="container hero-con hero-home">
         <div class="row" data-aos="fade-up" data-aos-delay="0">
           <div class="col-md-12">
             <h1 class="big-text">MS800 Hub</h1>

@@ -10,33 +10,35 @@
     <link rel="icon" href="assets/img/favicon.png" sizes="16x16">
     <meta name="author" content="Samartha">
     <meta name="description" content="ClubMS8 is a group of auto-mototive enthusiast in the town of sagar. To be specific, we are the group of proud MS800 owners.">
-    <!-- fonts -->
-    <link href="https://fonts.googleapis.com/css?family=Monoton&display=swap" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css?family=Lexend+Deca&display=swap" rel="stylesheet">
+    <!-- fontawesome -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="assets/css/bootstrap.min.css">
     <link rel="stylesheet" type="text/css" href="assets/css/styles.css">
-    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
   </head>
-	<body background="assets/img/bg.jpg">
+	<body>
     <?php include 'header.php'; ?>
-<br>
   <div class="content">
-        <section class="full-section"  id="fade">
+    <section class="full-page-section bg-image">
+      <div class="container hero-con">
+        <div class="row">
+          <div class="col-md-12">
+            <h1 class="big-text">About</h1>
+            <h4 class="tag">The MS800 Hub</h4>
+          </div>
+        </div>
+      </div>
+    </section>
+        <section>
           <div class="container">
-            <div class="row" >
-              <div class="col-md-12">
-                <h1 class="big-text">About</h1>
-                <h2 class="tag">The MS800 Hub</h2>
-              </div>
-            </div>
             <div class="row">
-              <div class="col-md-4 no-margin" >
-                <img src="assets/img/ms8i1.png" alt="" width="100%">
+              <div class="col-md-4" >
+                <div class="cardy">
+                  <img src="assets/img/ms8i1.png" alt="" width="100%">
+                </div>
               </div>
               <div class="col-md-8">
-                <p class="para-more">
+                <p class="cardy cell">
                   MS800 Hub is a group of auto-mototive enthusiast in the town of sagar.
                   To be specific, we are the group of proud MS800 owners. MS800 is a legendary car manufactured and sold in India.
                   2.6M units have been sold across India during the time period of 20 years since 1984.

@@ -41,13 +41,11 @@
 <script type="text/javascript">
 window.onscroll = function() {myFunction()};
 var header = document.getElementById("myHeader");
-var sticky = header.offsetTop+50;
+var sticky = header.offsetTop+150;
 function myFunction() {
 if (window.pageYOffset > sticky) {
   header.classList.add("sticky-header");
-  header.style.top="0px";
 } else {
-  header.style.top="-4rem";
   header.classList.remove("sticky-header");
 }
 }
