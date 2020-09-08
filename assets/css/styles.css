@@ -1,13 +1,13 @@
 body{
+  color: #fff;
+  font-family: 'lex';
+  position: relative;
+  min-height: 100vh;
   background-blend-mode: soft-light;
   background-attachment: fixed;
   background-size: 100%;
 	background-repeat: no-repeat;
 	background-color: rgba(0,0,0,.5) !important;
-  font-family: 'Lexend Deca';
-  min-height: 100vh;
-  position: relative;
-  color: #fff;
 }
 @media(max-width:768px){
   body{
@@ -15,8 +15,20 @@ body{
   background-color: #000000;
   }
 }
+@font-face {
+  font-family: "dash";
+  src: url("../fonts/dash.ttf");
+}
+@font-face {
+  font-family: "akira";
+  src: url("../fonts/akira.otf");
+}
+@font-face {
+  font-family: "lex";
+  src:url("../fonts/lex.ttf");
+}
 header{
-  transition: 1s;
+  transition: 1s ease;
   top: 0px;
   left: 0px;
   z-index: 24;
@@ -36,7 +48,7 @@ header{
 }
 .nav-link{
     padding: 5px;
-    font-family: 'Lexend Deca', sans-serif;
+    font-family: 'lex';
     color: rgba(255,255,255,0.7);
     text-decoration: none;
 }
@@ -46,7 +58,7 @@ footer {
   bottom: 0px;
   position: absolute;
   height: 3rem;
-  font-family: 'Lexend Deca', sans-serif;
+  font-family: 'lex';
   width: 100%;
   background-color: rgba(0,0,0,.8);
   color: white;
@@ -65,19 +77,15 @@ footer a:hover{
   color: #fff;
 }
 .big-text{
-  font-family: monoton;
+  font-family: "akira";
   color: white;
 }
 .tag{
-  padding: 5px;
-  font-family: 'Lexend Deca', sans-serif;
-  font-size: 22px;
-  color: white;
-  text-decoration: none;
+  font-family: 'lex';
   font-weight: bolder;
 }
 .list-more{
-  font-family: 'Lexend Deca', sans-serif;
+  font-family: 'lex';
   font-size: 18px;
   color: white;
   text-decoration: none;
@@ -94,7 +102,7 @@ footer a:hover{
 }
 .para-more{
   text-align: justify;
-  font-family: 'Lexend Deca', sans-serif;
+  font-family: 'lex';
   font-size: 16px;
   color: #fff;
   padding: 10px;
@@ -108,7 +116,7 @@ footer a:hover{
   font-family: serif;
 }
 .socials a{
-  font-family: 'Lexend Deca', sans-serif;
+  font-family: 'lex';
   font-size: 16px;
   color: white;
   text-decoration: none;
@@ -119,7 +127,7 @@ footer a:hover{
   color: white;
 }
 .para{
-  font-family: 'Lexend Deca', sans-serif;
+  font-family: 'lex';
   color:white;
 }
 .border{
@@ -132,28 +140,25 @@ footer a:hover{
 .btn{
 text-transform: uppercase;
 font-size: 12px;
-font-family: "Lexend deca";
-min-width: 60px;
-max-width: 100px;
+font-family: "lex";
+outline: none;
 }
 .btn-primary{
-  border: 2px solid #00e4ff;
+  border: 2px solid #00e4ff !important;
   color: #000000;
   background-color: #00e4ff;
 }
 .btn-primary:hover{
-  border: 2px solid #00e4ff;
   color: #000000;
   background-color: #00e4ff;
   box-shadow: 0 0 15px #00e4ff;
 }
 .btn-outline-primary{
-  border: 2px solid #00e4ff;
+  border: 2px solid #00e4ff !important;
   background-color: #000000;
   color: #00e4ff;
 }
 .btn-outline-primary:hover{
-  border: 2px solid #00e4ff;
   background-color: #000000;
   color: #00e4ff;
   box-shadow: 0 0 15px #00e4ff;
@@ -189,7 +194,7 @@ max-width: 100px;
   padding: 5px;
 }
 .header-admin{
-  font-family: 'Lexend Deca', sans-serif;
+  font-family: 'lex';
    left: 0;
    top: 0;
    width: 100%;
@@ -235,7 +240,7 @@ max-width: 100px;
 .blog-content h2{
   color: white;
   font-size: 26px;
-  font-family: 'Lexend Deca', sans-serif;
+  font-family: 'lex';
   font-weight: bold;
 }
 .blog-content p{
@@ -250,7 +255,7 @@ max-width: 100px;
 position: absolute;
  color: white;
   font-size: 18px;
-  font-family: 'Lexend Deca', sans-serif;
+  font-family: 'lex';
   font-weight: bold;
   right: 10%;
 }
@@ -852,10 +857,10 @@ input[type=file]::-webkit-file-upload-button{
   }
 }
 h3{
-  font-family:"Lexend Deca" !important;
+  font-family:"lex" !important;
 }
 p{
-  font-family: "Lexend deca";
+  font-family: "lex";
   font-size: 16px;
 }
 #swipe_down{

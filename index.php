@@ -10,18 +10,18 @@
   <link rel="icon" href="assets/img/favicon.png" sizes="16x16">
   <meta name="author" content="Samartha">
   <meta name="description" content="ClubMS8 is a group of auto-mototive enthusiast in the town of sagar. To be specific, we are the group of proud MS800 owners.">
-  <!-- fonts -->
-  <link href="https://fonts.googleapis.com/css?family=Monoton&display=swap" rel="stylesheet">
-  <link href="https://fonts.googleapis.com/css?family=Lexend+Deca&display=swap" rel="stylesheet">
   <!-- Bootstrap CSS -->
   <link rel="stylesheet" href="assets/css/bootstrap.min.css">
   <link rel="stylesheet" type="text/css" href="assets/css/styles.css">
-  <!-- <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css"> -->
+  <!-- jQuery -->
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
   <!-- lightbox -->
   <script src="https://cdnjs.cloudflare.com/ajax/libs/ekko-lightbox/5.3.0/ekko-lightbox.js" integrity="sha512-YibiFIKqwi6sZFfPm5HNHQYemJwFbyyYHjrr3UT+VobMt/YBo1kBxgui5RWc4C3B4RJMYCdCAJkbXHt+irKfSA==" crossorigin="anonymous"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/ekko-lightbox/5.3.0/ekko-lightbox.min.js" integrity="sha512-Y2IiVZeaBwXG1wSV7f13plqlmFOx8MdjuHyYFVoYzhyRr3nH/NMDjTBSswijzADdNzMyWNetbLMfOpIPl6Cv9g==" crossorigin="anonymous"></script>
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/ekko-lightbox/5.3.0/ekko-lightbox.css" integrity="sha512-Velp0ebMKjcd9RiCoaHhLXkR1sFoCCWXNp6w4zj1hfMifYB5441C+sKeBl/T/Ka6NjBiRfBBQRaQq65ekYz3UQ==" crossorigin="anonymous" />
+  <!-- aos -->
+  <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+
 </head>
 <body background="assets/img/bg.jpg">
   <?php include 'header.php'; ?>
@@ -29,25 +29,23 @@
   <div class="content">
     <section class="full-page-section">
       <div class="container">
-        <div class="row" >
+        <div class="row" data-aos="fade-up" data-aos-delay="0">
           <div class="col-md-12">
             <h1 class="big-text">MS800 Hub</h1>
-            <h2 class="tag">GLORY FOR THE CLASSIC</h2>
+            <h4 class="tag">GLORY FOR THE CLASSIC</h4>
           </div>
         </div>
-        <div class="row">
+        <div class="row"  data-aos="fade-up" data-aos-delay="400">
           <div class="col-md-6">
-            <p class="para-more" id="readmore">MS800 Hub is a group of auto-mototive enthusiast in the town of sagar.
-              To be specific, we are the group of proud MS800 owners.
-            <b>Club MS8 Sagar</b></p>
+            <p class="">MS800 Hub is a group of auto-mototive enthusiast in the town of sagar.
+              To be specific, we are the group of proud MS800 owners. <strong>MS800Hub</strong></p>
           </div>
         </div>
-        <div class="row">
-          <div class="col-md-4">
-            <a href="about.php"><button class="btn btn-primary">read more</button></a>
-            <a href="signup.php"> <button class="btn btn-outline-primary">signup</button></a>
+        <div class="row"  data-aos="fade-up" data-aos-delay="800">
+          <div class="col-md-6">
+            <a href="about.php" class="btn btn-primary">read more</a>
+            <a href="signup.php" class="btn btn-outline-primary">signup</a>
           </div>
-          <div class="col-md-2"></div>
         </div>
           <a href="#feed_section" id="swipe_down">
             <div class="arrow">
@@ -67,38 +65,35 @@
           </div>
         </div>
         <div class="row">
-            <?php
-            include 'assets/php/db_connect.php';
-            $feed_query="SELECT a.*, b.name, b.username from blog a, users b where a.active=1 and a.author_id=b.id order by a.image desc limit 3";
-            $feed_exec=mysqli_query($conn,$feed_query);
-            while($feed_row=mysqli_fetch_array($feed_exec)){
-              $i=$feed_row["id"];
-              ?>
-                <div class="col-md-4">
-                  <div class="feed-card">
-                    <div class="feed-card-img">
-                      <img src="assets/img/blog/<?php echo $feed_row["image"] ?>" alt="Card image cap">
+          <?php
+          include 'assets/php/db_connect.php';
+          $feed_query="SELECT a.*, b.name, b.username from blog a, users b where a.active=1 and a.author_id=b.id order by a.image desc limit 3";
+          $feed_exec=mysqli_query($conn,$feed_query);
+          $delay=0;
+          while($feed_row=mysqli_fetch_array($feed_exec)){
+            $delay+=300;
+            $i=$feed_row["id"];
+            ?>
+            <div class="col-md-4" data-aos="fade-right" data-aos-delay="<?php echo $delay ?>">
+              <div class="feed-card">
+                <div class="feed-card-img">
+                  <img src="assets/img/blog/<?php echo $feed_row["image"] ?>" alt="Card image cap">
+                </div>
+                <div class="feed-card-body">
+                  <div class="row">
+                    <div class="col-9">
+                      <h5>Latest Post</h5>
+                      <p><?php echo $feed_row["title"] ?></p>
                     </div>
-                    <div class="feed-card-body">
-                      <div class="row">
-                        <div class="col-9">
-                          <h5>Latest Post</h5>
-                          <p><?php echo $feed_row["title"] ?></p>
-                        </div>
-                        <div class="col-3 text-center">
-                          <a href="blog.php?bid=<?php echo $feed_row["id"] ?>" class="btn btn-primary">Read more</a>
-                        </div>
-                      </div>
+                    <div class="col-3 text-center">
+                      <a href="blog.php?bid=<?php echo $feed_row["id"] ?>" class="btn btn-primary">Read more</a>
                     </div>
                   </div>
-                </div><?php } ?>
+                </div>
               </div>
-              <br>
-              <br>
-            </div>
+            </div><?php } ?>
           </div>
         </div>
-      </div>
     </section>
     </div>
     <br>
@@ -125,6 +120,13 @@
 $(document).on('click', '[data-toggle="lightbox"]', function(event) {
       event.preventDefault();
       $(this).ekkoLightbox();
+  });
+</script>
+<script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+<script>
+  AOS.init({
+      once: true,
+      duration: 1000,
   });
 </script>
     <!-- Optional JavaScript -->
