@@ -81,11 +81,10 @@
                 <div class="feed-card-body">
                   <div class="row">
                     <div class="col-9">
-                      <h5>Latest Post</h5>
-                      <p><?php echo $feed_row["title"] ?></p>
+                      <h5><?php echo $feed_row["title"] ?></h5>
                     </div>
                     <div class="col-3 text-center">
-                      <a href="blog.php?bid=<?php echo $feed_row["id"] ?>" class="btn btn-primary">Read more</a>
+                      <a href="blog.php?bid=<?php echo $feed_row["id"] ?>" class="btn btn-primary">more</a>
                     </div>
                   </div>
                 </div>

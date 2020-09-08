@@ -3,7 +3,7 @@ body{
   font-family: 'lex';
   position: relative;
   min-height: 100vh;
-	background-color: #111119;
+	background-color: #111;
 }
 @font-face {
   font-family: "dash";
@@ -81,8 +81,20 @@ footer {
 .content{
   padding-bottom: 3rem;
 }
+@media screen and (max-width: 768px) {
+  footer{
+    height: 5rem;
+  }
+  .content{
+    padding-bottom: 5rem;
+  }
+}
+
 a{
   text-decoration: none !important;
+}
+footer p{
+  text-align: inherit;
 }
 footer a{
   color: #00e4ff;
@@ -93,6 +105,7 @@ footer a:hover{
 .big-text{
   font-family: "akira";
   color: white;
+  font-size: 46px;
 }
 .tag{
   font-family: 'lex';
@@ -871,7 +884,7 @@ input[type=file]::-webkit-file-upload-button{
   }
 }
 h3{
-  font-family:"lex" !important;
+  font-family:"lex" ;
 }
 p{
   font-family: "lex";
@@ -887,14 +900,14 @@ p{
   width: 100%;
   margin: 10px;
   background-color: #000;
-  border: 1px solid #00e4ff;
+  border: 1px solid #555;
   border-radius: 20px;
   overflow: hidden;
 }
 .feed-card-img{
   width: 100%;
   overflow: hidden;
-  max-height: 250px;
+  max-height: 350px;
 }
 .feed-card-img img{
   width: 100%;
@@ -928,10 +941,19 @@ a:hover{
 }
 .cardy{
   padding: 30px;
-  background-color: #111;
+  background-color: #151515;
+  border-radius: 20px;
+  margin: 10px;
+  border: 1px solid #222222;
 }
 .cell{
-  margin-top: 50px;
+  margin-top: 100px;
+}
+@media screen and (max-width : 768px) {
+  .cell{
+    margin-top: 0px;
+  }
+
 }
 .hero-con{
   width: 100%;
@@ -951,7 +973,23 @@ a:hover{
     padding-left: 10px;
   }
   #swipe_down{
-    left: 43%;
-    top: 80vh;
+    left: 45%;
+    top: 55vh;
   }
+}
+.heading{
+  font-family: "akira";
+}
+.inverse{
+  color: #222;
+  background-color: #00e4ff;
+}
+.social-list{
+  list-style-type: none;
+  padding: 0px;
+  font-size: 42px;
+  display: inline-flex;
+}
+.social-list a{
+  padding: 10px;
 }
