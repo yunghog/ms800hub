@@ -34,7 +34,7 @@ include 'assets/php/db_connect.php';
       <div class="container">
         <div class="row">
           <div class="col-md-7">
-            <div class="cardy cell-left">
+            <div class="cardy cell-left"  data-aos="fade-right">
               <h3 class="heading">Events</h3>
               <p>Activities of the CLUB MS8 Sagar includes car meets, road trips, hunt (hunting for the unique rides in the city). </p>
               <p>As the Club is at initial stage we have very few members. We are trying to reach more and more people through irl and
@@ -42,7 +42,7 @@ include 'assets/php/db_connect.php';
             </div>
           </div>
           <div class="col-md-5">
-            <div class="cardy-img cell-right">
+            <div class="cardy-img cell-right"  data-aos="fade-right">
               <img src="assets/img/sponser1.jpg" alt="" width="100%">
             </div>
           </div>
@@ -52,14 +52,14 @@ include 'assets/php/db_connect.php';
     <br>
     <section>
       <div class="container">
-        <div class="row" >
+        <div class="row"  data-aos="fade-up">
           <div class="col-md-12">
             <h2 class="heading">Events by CLUB MS8 Kerala</h2>
           </div>
         </div>
         <div class="row">
           <div class="col-md-4">
-            <div class="dark-card">
+            <div class="dark-card"  data-aos="fade-right">
               <div class="dark-card-img">
                 <iframe width="100%"  src="https://www.youtube.com/embed/CrmutHczGSU" frameborder="0" allow="accelerometer; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
               </div>
@@ -81,7 +81,7 @@ include 'assets/php/db_connect.php';
             </div>
           </div>
           <div class="col-md-4">
-            <div class="dark-card">
+            <div class="dark-card"  data-aos="fade-right">
               <div class="dark-card-img">
                 <iframe width="100%"  src="https://www.youtube.com/embed/pDT6yYm4-OI" frameborder="0" allow="accelerometer; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
               </div>
