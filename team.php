@@ -33,14 +33,14 @@
       </section>
       <section>
         <div class="container"><br><br>
-          <div class="row">
+          <div class="row"   data-aos="fade-up">
             <div class="col-md-12 text-center">
               <h3 class="heading">Founders</h3>
             </div>
           </div>
           <div class="row justify-content-center">
             <div class="col-md-4">
-              <div class="dark-card">
+              <div class="dark-card" data-aos="fade-right" data-aos-delay="300">
                 <div class="dark-card-img">
                   <img src="assets/img/admin1.jpg" alt="Admin Samartha">
                 </div>
@@ -57,7 +57,7 @@
               </div>
             </div>
             <div class="col-md-4">
-              <div class="dark-card">
+              <div class="dark-card" data-aos="fade-right" data-aos-delay="600">
                 <div class="dark-card-img">
                   <img src="assets/img/admin2.jpg" alt="Admin Sadeep">
                 </div>
@@ -74,16 +74,16 @@
             </div>
           </div>
           <br>
-          <div class="row">
+          <div class="row"   data-aos="fade-up">
             <div class="col-md-12 text-center">
               <h3 class="heading">Our Sponsers</h2>
             </div>
           </div>
             <div class="row justify-content-center">
               <div class="col-md-8">
-                <div class="dark-card">
+                <div class="dark-card"   data-aos="fade-up">
                   <div class="dark-card-img">
-                    <img src="assets/img/sponser1.jpg" alt="Admin Sadeep">
+                    <img src="assets/img/sponser1.jpg" alt="Aditya Automobiles">
                   </div>
                   <div class="dark-card-body">
                     <h5>Aditya Automobiles</h5>
