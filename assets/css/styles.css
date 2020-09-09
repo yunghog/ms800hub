@@ -38,6 +38,11 @@ header{
     top:0px;
   }
 }
+@media screen and (max-width: 768px) {
+  header{
+    background-color: #000;
+  }
+}
 .logo{
   height: 40px;
 }
@@ -946,11 +951,24 @@ a:hover{
   margin: 10px;
   border: 1px solid #222222;
 }
-.cell{
-  margin-top: 100px;
+.cardy-img{
+  overflow: hidden;
+  background-color: #151515;
+  border-radius: 20px;
+  margin: 10px;
+  border: 1px solid #222222;
+}
+.cell-right{
+  margin-top: 50px;
+}
+.cell-left{
+  margin-top: -50px;
 }
 @media screen and (max-width : 768px) {
-  .cell{
+  .cell-right{
+    margin-top: 0px;
+  }
+  .cell-left{
     margin-top: 0px;
   }
 
@@ -961,6 +979,7 @@ a:hover{
   /* left: 20%; */
   padding-left: 20%;
   top: 250px;
+  z-index: 10;
 }
 .hero-home{
   top: 150px;
@@ -992,4 +1011,36 @@ a:hover{
 }
 .social-list a{
   padding: 10px;
+}
+.form-dark{
+  width: 100%;
+  color: #eee;
+  background-color: #222;
+  padding: 5px;
+  padding-top: 15px;
+  border: 0px;
+  border-bottom: 2px solid #555;
+}
+.form-dark:focus{
+  outline: 0px;
+  border-bottom: 2px solid #00e4ff;
+}
+.form-dark-con label{
+  color: #ccc;
+  position: absolute;
+  top: 0px;
+  font-size: 18px;
+  margin: 10px;
+  padding: 0px;
+  transition: .2s ease-in-out,  font-size .2s ease-in-out;
+}
+.form-dark-con i{
+  padding-top: 10px;
+  font-size: 26px;
+}
+.form-dark-con .active-label{
+  top: -12px  !important;
+  font-size: 12px !important;
+  letter-spacing: 2px;
+  color: #00e4ff;
 }

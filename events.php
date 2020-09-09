@@ -21,182 +21,39 @@ include 'assets/php/db_connect.php';
     <link rel="stylesheet" type="text/css" href="assets/css/styles.css">
     <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
   </head>
-	<body background="assets/img/bg.jpg">
+	<body>
+    <div class="content">
     <?php include 'header.php'; ?>
-<br>
-<section class="full-section"  id="fade">
-  <div class="container" id="blog_thumb_cont">
-    <div class="row">
-      <div class="col-md-12">
-        <h1 class="big-text">EVENTS</h1>
-        <h2 class="tag">Upcoming events</h2>
+    <section  id="hero" class="full-page-section bg-image"  data-aos="fade">
+      <div class="container hero-con">
+        <div class="row" data-aos="fade-right">
+          <div class="col-md-12">
+            <h1 class="big-text">EVENTS</h1>
+            <h4 class="tag">Clutch, Shift and Accelerate</h4>
+          </div>
+        </div>
       </div>
-    </div>
-    <div class="row">
-      <?php
-      $gal_query="SELECT a.*, b.name, b.username from blog a, users b where a.active=1 and a.author_id=b.id order by a.date";
-      // echo $gal_query;
-      $gal_exec=mysqli_query($conn,$gal_query);
-      while($gal_rows=mysqli_fetch_array($gal_exec)){
-        //$args=$gal_rows['image'].'%'.$gal_rows['username'].'%'.$gal_rows['caption'].'%'.$gal_rows['date'].'%'.$gal_rows['tag'];
-        // echo $args;
-        ?>
-        <div class="col-md-4">
-          <div class="blog-thumb" onclick="openBlog('<?php echo $gal_rows['id'];?>')">
-            <div class="row no-gutters">
-              <div class="col-5">
-                <div class="blog-image">
-                  <img src="assets/img/blog/<?php echo $gal_rows['image']; ?>" alt="" height="100%">
-                </div>
-              </div>
-              <div class="col-7">
-                <div class="blog-desc">
-                  <h5><?php echo $gal_rows['title']; ?></h5>
-                  <p>by <?php echo $gal_rows['name']; ?> <br> pc : <?php echo $gal_rows['tag']; ?><br> <?php echo $gal_rows['date']; ?> </p>
-                </div>
-              </div>
+    </section>
+    <section>
+      <div class="container">
+        <div class="row">
+          <div class="col-md-8">
+            <div class="cardy cell-left">
+              <h3 class="heading">Events</h3>
+              <p>Activities of the CLUB MS8 Sagar includes car meets, road trips, hunt (hunting for the unique rides in the city). </p>
+              <p>In the town of Sagar. All the events of the Club is carried out in presense of SAMNSADY. As the Club is
+              at initial stage we have very few members. We are trying to reach more and more people through irl and
+              social media. Till date we have not cunducted any meet. We hope our community will grow more! </p>
             </div>
           </div>
-        </div><br> <?php } ?>
-
-    </div>
-  </div>
-</section>
-<?php
-  if(isset($_GET['bid'])){
-    $id=$_GET['bid'];
-    $blog_query="SELECT a.*, b.name, b.username, b.name from blog a, users b where a.active=1 and a.author_id=b.id and a.id='$id'";
-    $blog_exec=mysqli_query($conn,$blog_query);
-    while ($blog_rows=mysqli_fetch_array($blog_exec)) {
-      ?>
-      <div class="container">
-        <div class="blog-full">
-        <div class="row no-gutters">
-            <div class="col-md-6">
-              <div class="blog-image-full" >
-                <button class="btn btn-primary back-button" type="button" name="back-button" onclick="goBackBlog()"> <i class="fa fa-arrow-left"></i></button>
-                <button class="btn btn-primary share-button" type="button" name="share-button" onclick="openShare()"> <i class="fa fa-share"></i></button>
-                <div class="share-panel" id="share-panel">
-                  <i class="fa fa-facebook" onclick="share('facebook')"></i>
-                  <i class="fa fa-whatsapp" onclick="share('whatsapp')"></i>
-                  <i class="fa fa-link" onclick="share('link')"></i>
-                </div>
-                <div class="like-button">
-                  <div class="fb-like" data-href="http://www.ms800hub.rf.gd/blog.php?bid=<?php echo $id ; ?>" data-width="" data-layout="button_count" data-action="like" data-size="small" data-share="false"></div>
-                </div>
-                <img id="blog-image-full" src="assets/img/blog/<?php echo $blog_rows['image']; ?>" alt="" width="100%">
-              </div>
-            </div>
-            <div class="col-md-6">
-              <div class="blog-desc-full" id="blog-desc-full">
-                <div class="row">
-                  <div class="col-12 text-right">
-                    <h3><?php echo $blog_rows['title'] ?></h3>
-                    <small class="text-primary">by <?php echo $blog_rows['name']; ?> | pc : <a target="_blank" href="https://instagram.com/<?php echo $blog_rows['tag']; ?>"><?php echo $blog_rows['tag']; ?></a> | <?php for ($i=5; $i <=9 ; $i++) {
-                      echo $blog_rows['date'][$i];
-                    } ?></small>
-                    <br>
-                      <p class="text-justify"><?php echo $blog_rows['body']; ?></p>
-                  </div>
-                </div>
-              </div>
+          <div class="col-md-4">
+            <div class="cardy-img cell-right">
+              <img src="assets/img/sponser1.jpg" alt="" width="100%">
             </div>
           </div>
         </div>
       </div>
-
-      <?php
-    }
-    ?>
-    <script type="text/javascript">
-      document.getElementById('blog_thumb_cont').style.display="none";
-    </script>
-
-    <script type="text/javascript">
-      if(screen.width>760){
-        var img_height=document.getElementById('blog-image-full').height;
-        // alert(img_height);
-        document.getElementById('blog-desc-full').style.height=img_height+"px";
-      }
-    </script>
-    <script type="text/javascript">
-      function openShare(){
-        var sharepanel=document.getElementById('share-panel');
-        if(sharepanel.style.visibility=="visible"){
-          sharepanel.style.height="0px";
-          sharepanel.style.opacity="0";
-          sharepanel.style.visibility="hidden";
-        }
-        else{
-          sharepanel.style.visibility="visible";
-          sharepanel.style.height="35px";
-          sharepanel.style.opacity="1";
-        }
-      }
-      function share(arg){
-        // alert(window.location);
-        link=window.location;
-        if(arg=='facebook'){
-          window.open('https://www.facebook.com/sharer/sharer.php?u=' + link, 'facebook-popup', 'height=350,width=600');
-        }
-        if(arg=='whatsapp'){
-          link='https://api.whatsapp.com/send?text=%20' + link;
-          window.open(link);
-        }
-        if(arg=='link'){
-          var x=document.createElement('input');
-          x.value=link;
-          x.style.position = 'absolute';
-          x.style.left = '-9999px';
-          document.body.appendChild(x);
-          x.select();
-          document.execCommand('copy');
-          document.body.removeChild(x);
-          window.alert('link copied : '+ link);
-          // window.prompt("Copy to clipboard: Ctrl+C, Enter", link);
-        }
-        openShare();
-      }
-    </script>
-    <?php
-  }
- ?>
-<br>
-</div>
-<br>
-
-<br>
-  <div class="content">
-        <section class="full-section"  id="fade">
-          <div class="container">
-            <div class="row" >
-              <div class="col-md-12">
-                <!-- <h1 class="big-text">Events</h1> -->
-                <h2 class="tag">Clutch, Shift and Accelerate</h2>
-              </div>
-            </div>
-            <div class="row">
-              <div class="col-md-8">
-                <p class="para-more">
-                  Activities of the CLUB MS8 Sagar includes car meets,
-                  road trips, hunt (hunting for the unique rides in the
-                  city).
-                </p>
-                <p class="para-more">
-                  In the town of Sagar. All the events of the Club is
-                  carried out in presense of SAMNSADY. As the Club is
-                  at initial stage we have very few members. We are
-                  trying to reach more and more people through irl and
-                  social media. Till date we have not cunducted any meet.
-                   We hope our community will grow more!
-                </p>
-              </div>
-              <div class="col-md-4 no-margin" >
-                <img src="assets/img/sponser1.jpg" alt="" width="100%">
-              </div>
-            </div>
-          </div>
-        </section>
+    </section>
         <br>
         <section class="full-section"  id="fade">
           <div class="container">
