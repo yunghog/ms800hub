@@ -16,6 +16,8 @@ include 'assets/php/db_connect.php';
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="assets/css/bootstrap.min.css">
     <link rel="stylesheet" type="text/css" href="assets/css/styles.css">
+    <!-- aos -->
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
   </head>
 	<body>
     <div class="content">
@@ -111,15 +113,12 @@ include 'assets/php/db_connect.php';
     document.getElementById('events').classList.add('active2');
     document.getElementById('foo').style.position="static";
   </script>
-  <script type="text/javascript">
-    function openBlog(id) {
-    document.getElementById('blog_thumb_cont').style.display="none";
-    link= "blog.php?bid="+id;
-    window.location.href=link;
-    }
-    function goBackBlog(){
-    window.location.href="blog.php";
-    }
+    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+    <script>
+      AOS.init({
+          once: true,
+          duration: 1000,
+      });
     </script>
     <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
     <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
