@@ -1,7 +1,6 @@
 <?php
 include 'assets/php/db_connect.php';
  ?>
-
 <!doctype html>
 <html lang="en">
   <head>
@@ -13,13 +12,10 @@ include 'assets/php/db_connect.php';
     <meta name="author" content="Samartha">
     <meta name="description" content="ClubMS8 is a group of auto-mototive enthusiast in the town of sagar. To be specific, we are the group of proud MS800 owners.">
     <!-- fonts -->
-    <link href="https://fonts.googleapis.com/css?family=Monoton&display=swap" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css?family=Lexend+Deca&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="assets/css/bootstrap.min.css">
     <link rel="stylesheet" type="text/css" href="assets/css/styles.css">
-    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
   </head>
 	<body>
     <div class="content">
@@ -37,16 +33,15 @@ include 'assets/php/db_connect.php';
     <section>
       <div class="container">
         <div class="row">
-          <div class="col-md-8">
+          <div class="col-md-7">
             <div class="cardy cell-left">
               <h3 class="heading">Events</h3>
               <p>Activities of the CLUB MS8 Sagar includes car meets, road trips, hunt (hunting for the unique rides in the city). </p>
-              <p>In the town of Sagar. All the events of the Club is carried out in presense of SAMNSADY. As the Club is
-              at initial stage we have very few members. We are trying to reach more and more people through irl and
-              social media. Till date we have not cunducted any meet. We hope our community will grow more! </p>
+              <p>As the Club is at initial stage we have very few members. We are trying to reach more and more people through irl and
+              social media. Till date we have not cunducted any big crew meetups. We hope our community will grow more! </p>
             </div>
           </div>
-          <div class="col-md-4">
+          <div class="col-md-5">
             <div class="cardy-img cell-right">
               <img src="assets/img/sponser1.jpg" alt="" width="100%">
             </div>
@@ -54,61 +49,69 @@ include 'assets/php/db_connect.php';
         </div>
       </div>
     </section>
-        <br>
-        <section class="full-section"  id="fade">
-          <div class="container">
-            <div class="row" >
-              <div class="col-md-12">
-                <h2 class="tag">Events by CLUB MS8 Kerala</h2>
+    <br>
+    <section>
+      <div class="container">
+        <div class="row" >
+          <div class="col-md-12">
+            <h2 class="heading">Events by CLUB MS8 Kerala</h2>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-md-4">
+            <div class="dark-card">
+              <div class="dark-card-img">
+                <iframe width="100%"  src="https://www.youtube.com/embed/CrmutHczGSU" frameborder="0" allow="accelerometer; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
               </div>
-            </div>
-            <div class="row">
-              <div class="col-sm-6">
-                <div class="card bg-black">
-                <iframe height="300px" src="https://www.youtube.com/embed/CrmutHczGSU" frameborder="0" allow="accelerometer; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-                <div class="card-body">
-                  <div class="row align-items-center">
-                    <div class="col-9">
-                      <h5 class="card-title para">Celebration</h5>
-                      <p class="card-text"><span class="para">Club MS8 50k insta Family celebration
-                      </span></p>
-                    </div>
-                    <div class="col-2">
-                      <a href="https://www.youtube.com/watch?v=pDT6yYm4-OI&t=2s"  target="_blank"><button class="btn btn-primary">More</button></a>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-            <div class="col-sm-6">
-              <div class="card bg-black">
-              <iframe height="300px;" src="https://www.youtube.com/embed/pDT6yYm4-OI" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen=""></iframe>
-              <div class="card-body">
-                <div class="row align-items-center">
+              <div class="dark-card-body">
+                <div class="row">
                   <div class="col-9">
-                    <h5 class="card-title para">Thrisur meet 2019</h5>
-                    <p class="card-text"><span class="para">MS8 Brotherhoood KL08 Thrisur,Kerala
-                    </span></p>
+                    <p class="heading">Celebration</p>
                   </div>
                   <div class="col-2">
-                    <a href="https://www.youtube.com/watch?v=pDT6yYm4-OI&amp;t=2s" target="_blank" ><button class="btn btn-primary">More</button></a>
+                    <a href="https://www.youtube.com/watch?v=pDT6yYm4-OI&t=2s"  target="_blank"><button class="btn btn-primary">More</button></a>
+                  </div>
+                </div>
+                <div class="row">
+                  <div class="col-12">
+                    <p>Club MS8 50k insta Family celebration</p>
                   </div>
                 </div>
               </div>
             </div>
-
-            </div>
+          </div>
+          <div class="col-md-4">
+            <div class="dark-card">
+              <div class="dark-card-img">
+                <iframe width="100%"  src="https://www.youtube.com/embed/pDT6yYm4-OI" frameborder="0" allow="accelerometer; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+              </div>
+              <div class="dark-card-body">
+                <div class="row">
+                  <div class="col-9">
+                    <p class="heading">Thrisur meet 2019</p>
+                  </div>
+                  <div class="col-2">
+                    <a href="https://www.youtube.com/watch?v=pDT6yYm4-OI&amp;t=2s"  target="_blank"><button class="btn btn-primary">More</button></a>
+                  </div>
+                </div>
+                <div class="row">
+                  <div class="col-12">
+                    <p>MS8 Brotherhoood KL08 Thrisur,Kerala</p>
+                  </div>
+                </div>
+              </div>
             </div>
           </div>
-        </section>
+        </div>
       </div>
-      <br>
-    <?php include 'footer.php'; ?>
-    <script type="text/javascript">
-        document.getElementById('events').classList.add('active2');
-      document.getElementById('foo').style.position="static";
-    </script>
-    <script type="text/javascript">
+    </section>
+  </div>
+  <?php include 'footer.php'; ?>
+  <script type="text/javascript">
+    document.getElementById('events').classList.add('active2');
+    document.getElementById('foo').style.position="static";
+  </script>
+  <script type="text/javascript">
     function openBlog(id) {
     document.getElementById('blog_thumb_cont').style.display="none";
     link= "blog.php?bid="+id;
