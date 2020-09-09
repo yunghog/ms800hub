@@ -1,5 +1,3 @@
-<?php  ?>
-
 <!doctype html>
 <html lang="en">
   <head>
@@ -150,7 +148,7 @@
                 </div>
                 <div class="form-row">
                   <div class="col-12 text-center form-group">
-                    <button type="submit" class="btn btn-primary" name="send_mail">Send</button>
+                    <button type="submit" class="btn btn-primary" name="send_mail">Send mail</button>
                   </div>
                 </div>
 
