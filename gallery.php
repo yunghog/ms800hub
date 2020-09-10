@@ -63,8 +63,7 @@ include 'assets/php/db_connect.php';
           <div class="container-fluid">
             <i class="fa fa-close closebtn2" onclick="closeGalleryModel()"></i>
             <div class="row">
-              <div class="col-md-4"></div>
-              <div class="col-md-4 no-margin">
+              <div class="col-md-6">
                 <div class="card bg-black" id="<?php echo $gal_rows['image'] ?>">
                   <img id="image" src="" class="card-img-top" alt="...">
                   <div class="card-body">
