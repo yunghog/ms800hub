@@ -12,70 +12,71 @@ include 'assets/php/db_connect.php';
     <link rel="icon" href="assets/img/favicon.png" sizes="16x16">
     <meta name="author" content="Samartha">
     <meta name="description" content="ClubMS8 is a group of auto-mototive enthusiast in the town of sagar. To be specific, we are the group of proud MS800 owners.">
-    <!-- fonts -->
-    <link href="https://fonts.googleapis.com/css?family=Monoton&display=swap" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css?family=Lexend+Deca&display=swap" rel="stylesheet">
+    <!-- fontICONS -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="assets/css/bootstrap.min.css">
     <link rel="stylesheet" type="text/css" href="assets/css/styles.css">
     <!-- jquery -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-
+    <!-- aos -->
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
   </head>
-	<body background="assets/img/bg.jpg">
+	<body>
     <?php include 'header.php'; ?>
-<br>
   <div class="content">
-        <section class="full-section"  id="fade">
-          <div class="container">
-            <div class="row" >
-              <div class="col-md-12 text-center">
-                <h1 class="big-text">Gallery</h1>
-                <h2 class="tag">Showcase of our culture</h2>
+    <section  id="hero" class="full-page-section bg-image"  data-aos="fade">
+      <div class="container hero-con">
+        <div class="row" data-aos="fade-right">
+          <div class="col-md-12">
+            <h1 class="big-text">GALLERY</h1>
+            <h4 class="tag">Showcase of our culture</h4>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section data-aos="fade">
+      <div class="container">
+        <div class="row gallery no-gutters">
+          <?php
+          $gal_query="SELECT a.*, b.username from gallery a, users b where a.active=1 and a.author_id=b.id order by a.date desc ";
+          // echo $gal_query;
+          $gal_exec=mysqli_query($conn,$gal_query);
+          while($gal_rows=mysqli_fetch_array($gal_exec)){
+            $args=$gal_rows['image'].'%'.$gal_rows['username'].'%'.$gal_rows['caption'].'%'.$gal_rows['date'].'%'.$gal_rows['tag'].'%'.$gal_rows['id'];
+            // echo $args;
+            ?>
+            <div class="col-md-3 bg-black align-items-center">
+              <div class="thumbnail" onclick="openGalleryModel('<?php echo $args; ?>')">
+                <img src="assets/img/gallery/<?php echo $gal_rows['image'];?>" >
+                <div class="thumbnail-overlay">
+                  <p class="para-more"><?php echo $gal_rows['caption']; ?></p>
+                </div>
               </div>
-            </div>
+            </div><?php } ?>
           </div>
-        </section>
-        <section class="full-section"  id="fade">
-          <div class="container">
-            <div class="row gallery no-gutters">
-              <?php
-              $gal_query="SELECT a.*, b.username from gallery a, users b where a.active=1 and a.author_id=b.id order by a.date desc ";
-              // echo $gal_query;
-              $gal_exec=mysqli_query($conn,$gal_query);
-              while($gal_rows=mysqli_fetch_array($gal_exec)){
-                $args=$gal_rows['image'].'%'.$gal_rows['username'].'%'.$gal_rows['caption'].'%'.$gal_rows['date'].'%'.$gal_rows['tag'].'%'.$gal_rows['id'];
-                // echo $args;
-                ?>
-              <div class="col-md-3 bg-black align-items-center">
-                  <div class="thumbnail" onclick="openGalleryModel('<?php echo $args; ?>')">
-                      <img src="assets/img/gallery/<?php echo $gal_rows['image'];?>" >
-                      <div class="thumbnail-overlay">
-                        <p class="para-more"><?php echo $gal_rows['caption']; ?></p>
-                      </div>
+        </div>
+      </section>
+      <section class="overlay-model" id="overlay-model">
+        <div class="container">
+          <div class="row justify-content-center">
+            <div class="">
+              <div class="" >
+                <i class="fa fa-close closebtn2" onclick="closeGalleryModel()"></i>
+                <div class="gallery-card" id="<?php echo $gal_rows['image'] ?>">
+                  <div class="gallery-card-image">
+                    <img id="image" src="">
                   </div>
-              </div><?php } ?>
-            </div>
-          </div>
-        </section>
-        <section class="overlay-model full-section" id="overlay-model" >
-          <div class="container-fluid">
-            <i class="fa fa-close closebtn2" onclick="closeGalleryModel()"></i>
-            <div class="row">
-              <div class="col-md-6">
-                <div class="card bg-black" id="<?php echo $gal_rows['image'] ?>">
-                  <img id="image" src="" class="card-img-top" alt="...">
-                  <div class="card-body">
+                  <div class="gallery-card-body">
                     <div class="like-panel">
-                        <!-- <i class="fa fa-heart" id=like onclick="like_gal()"></i> -->
-                        <!-- <a href="" id="dlLink" download><i class="fa fa-download"></i> </a> -->
-                        <div class="share-panel share-panel-2" id="share-panel">
-                          <input type="hidden" id='gid' value="">
-                          <i class="fa fa-facebook" onclick="share('facebook')"></i>
-                          <i class="fa fa-whatsapp" onclick="share('whatsapp')"></i>
-                          <i class="fa fa-link" onclick="share('link')"></i>
-                        </div>
+                      <!-- <i class="fa fa-heart" id=like onclick="like_gal()"></i> -->
+                      <!-- <a href="" id="dlLink" download><i class="fa fa-download"></i> </a> -->
+                      <div class="share-panel share-panel-2" id="share-panel">
+                        <input type="hidden" id='gid' value="">
+                        <i class="fa fa-facebook" onclick="share('facebook')"></i>
+                        <i class="fa fa-whatsapp" onclick="share('whatsapp')"></i>
+                        <i class="fa fa-link" onclick="share('link')"></i>
+                      </div>
                     </div>
                     <div class="row">
                       <div class="col-10">
@@ -85,38 +86,36 @@ include 'assets/php/db_connect.php';
                         <i class="fa fa-share" onclick="openShare()"></i>
                       </div>
                     </div>
-                    <p class="card-text"><small class="text-muted" id="author"></small> | <small class="text-muted text-primary" id="tag"></small></p>
+                    <p><small class="text-muted" id="author"></small> | <small class="text-muted text-primary" id="tag"></small></p>
                   </div>
                 </div>
               </div>
             </div>
           </div>
-        </section>
-        <br>
-      </div>
-      <?php
-      if (isset($_GET['gid'])) {
-        $gid=$_GET['gid'];
-        echo $gid;
-        $gal_query2="SELECT a.*, b.username from gallery a, users b where a.active=1 and a.author_id=b.id and a.id='$gid' order by a.date desc";
-        // echo $gal_query;
-        $gal_exec2=mysqli_query($conn,$gal_query2);
-        while($gal_rows2=mysqli_fetch_array($gal_exec2)){
-          $args2=$gal_rows2['image'].'%'.$gal_rows2['username'].'%'.$gal_rows2['caption'].'%'.$gal_rows2['date'].'%'.$gal_rows2['tag'].'%'.$gal_rows2['id'];
-          echo $args2;
-          ?>
-          <script type="text/javascript">
-          $( document ).ready(function() {
-              openGalleryModel( "<?php echo $args2; ?>" );
-          });          </script>
-          <?php
-        }
-      } ?>
-      <br>
+        </div>
+      </section>
+    </div>
+    <?php
+    if (isset($_GET['gid'])) {
+      $gid=$_GET['gid'];
+      echo $gid;
+      $gal_query2="SELECT a.*, b.username from gallery a, users b where a.active=1 and a.author_id=b.id and a.id='$gid' order by a.date desc";
+      // echo $gal_query;
+      $gal_exec2=mysqli_query($conn,$gal_query2);
+      while($gal_rows2=mysqli_fetch_array($gal_exec2)){
+        $args2=$gal_rows2['image'].'%'.$gal_rows2['username'].'%'.$gal_rows2['caption'].'%'.$gal_rows2['date'].'%'.$gal_rows2['tag'].'%'.$gal_rows2['id'];
+        echo $args2;
+        ?>
+        <script type="text/javascript">
+        $( document ).ready(function() {
+          openGalleryModel( "<?php echo $args2; ?>" );
+        });          </script>
+        <?php
+      }
+    } ?>
     <?php include 'footer.php'; ?>
     <script type="text/javascript">
       document.getElementById('gallery').classList.add('active2');
-      // document.getElementById('foo').style.position="static";
     </script>
     <script type="text/javascript">
       function openGalleryModel(args) {
@@ -129,9 +128,6 @@ include 'assets/php/db_connect.php';
         document.getElementById('tag').innerHTML="<a style='font-size:12px;' href='https://instagram.com/"+args[4]+"' target='_blank'>"+args[4]+"</a>";
         document.getElementById('gid').setAttribute("value",args[5]);
         document.getElementById('dlLink').setAttribute("href",image_src);
-          // document.getElementById('caption').innerHTML=args[0];
-          // document.body.scrollTop = 0;
-        // document.documentElement.scrollTop = 0;
       }
       function closeGalleryModel() {
         document.getElementById('overlay-model').style.display='none';
@@ -151,7 +147,7 @@ include 'assets/php/db_connect.php';
         }
         else{
           sharepanel.style.visibility="visible";
-          sharepanel.style.height="35px";
+          sharepanel.style.height="45px";
           sharepanel.style.opacity="1";
         }
       }
@@ -185,6 +181,13 @@ include 'assets/php/db_connect.php';
         // console.log(window.this);
         document.getElementById('like').style.color="#00e4ff";
       }
+    </script>
+    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+    <script>
+      AOS.init({
+          once: true,
+          duration: 1000,
+      });
     </script>
     <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
     <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>

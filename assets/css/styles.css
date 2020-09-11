@@ -638,7 +638,7 @@ position: absolute;
 .thumbnail-overlay{
   height: 0px;
   overflow-y: hidden;
-  z-index: 500;
+  z-index: 5;
   width: 100%;
   position: absolute;
   bottom: 0px;
@@ -661,8 +661,18 @@ position: absolute;
   height: auto;
 }
 }
+.overlay-model-con{
+  text-align: center;
+}
+.overlay-model-background{
+  width: 100%;
+  height: 100%;
+  background-color: #0009;
+  z-index: 10;
+  position: absolute;
+}
 .overlay-model{
-  padding-top: 20px;
+  padding: 20px;
   display: none;
   width: 100%;
   height: 100%;
@@ -672,11 +682,11 @@ position: absolute;
   left: 0;
   z-index: 25;
   animation: fade_slow 1s ease;
-  overflow: hidden;
+  overflow: scroll;
 }
 @media (max-width: 992px){
   .overlay-model{
-    padding: 30% 10px 10px 10px;
+    padding: 30px 10px 10px 10px;
   }
 }
 @keyframes fade_slow {
@@ -696,8 +706,35 @@ position: absolute;
   cursor: pointer;
   z-index: 30;
 }
-#image{
-  width: 100%;
+.gallery-card{
+  position: relative;
+  max-width: 100%;
+ background-color: #222;
+ border-radius: 20px;
+ border: 2px solid #555;
+ overflow: hidden;
+}
+.gallery-card-image{
+  max-height: 80vh;
+}
+.gallery-card-image img{
+  max-height: 80vh;
+}
+.gallery-card-body{
+  text-align: left;
+  padding: 20px;
+}
+@media screen and (max-width: 768px) {
+  .gallery-card-image{
+    max-height: 80vh;
+  }
+  .gallery-card-image img{
+    max-height: 80vh;
+  }
+  #image{
+    max-height: 90vh;
+    width: 100%;
+  }
 }
 .blog-thumb{
   background-color: rgba(0,0,0,.6);
@@ -756,13 +793,12 @@ position: absolute;
   height: 0px;
   opacity: 0;
   visibility: hidden;
-  /* display: none; */
-  right: 10px;
   position: absolute;
-  top: 50px;
   background-color: rgba(0, 0, 0, 0.7);
   border: 1px solid #00e4ff;
-  padding: 5px;
+  padding: 10px;
+  border-radius: 10px;
+  margin: 20px;
 }
 .share-panel-2{
   right: 0;
@@ -813,7 +849,8 @@ position: absolute;
 .modal-overlay{
   position: absolute;
   background-color: #fff5;
-  width: 100%;
+  max-width: 100%;
+  max-height: 90vh;
 }
 input[type=file]::-webkit-file-upload-button{
   background-color: #00e4ff;
@@ -1073,4 +1110,11 @@ a:hover{
 }
 .text-primary:hover a{
   background-color: #555;
+}
+::-webkit-scrollbar {
+  display: none;
+}
+.example {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
 }
