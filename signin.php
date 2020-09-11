@@ -14,9 +14,6 @@ if(isset($_SESSION['user_id'])){
   }
 }
 ?>
-<script type="text/javascript">
-  window.locaton.href=''
-</script>
 <!doctype html>
 <html lang="en">
   <head>
@@ -27,68 +24,60 @@ if(isset($_SESSION['user_id'])){
     <link rel="icon" href="assets/img/favicon.png" sizes="16x16">
     <meta name="author" content="Samartha">
     <meta name="description" content="ClubMS8 is a group of auto-mototive enthusiast in the town of sagar. To be specific, we are the group of proud MS800 owners.">
-    <!-- fonts -->
-    <link href="https://fonts.googleapis.com/css?family=Monoton&display=swap" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css?family=Lexend+Deca&display=swap" rel="stylesheet">
+    <!-- fonticon -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="assets/css/bootstrap.min.css">
     <link rel="stylesheet" type="text/css" href="assets/css/styles.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <!-- aos -->
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
   </head>
-	<body background="assets/img/bg.jpg">
-    <?php include 'header.php'; ?>
-<br>
+	<body>
+  <?php include 'header.php'; ?>
   <div class="content">
-        <section class="full-section"  id="fade">
-          <div class="container">
-            <div class="row no-gutters ">
-              <div class="col-md-4"></div>
-              <div class="col-md-4 bg-black">
-                <img src="assets/img/ms8i1.png" alt="" width="100%">
-              </div>
-            </div>
-            <div class="row no-gutters text-center">
-              <div class="col-md-4"></div>
-              <div class="col-md-4">
-                <div class="signup-form">
-                  <form class="form-control2" action="assets/php/signin.php" method="post">
-                    <div class="row">
-                      <div class="col-12">
-                        <h5 class="tag text-primary text-center">SIGN-IN</h5>
-                      </div>
+    <section class="bg-image login-form-container">
+      <div class="container">
+        <div class="row no-gutters justify-content-center">
+          <div class="col-md-4">
+            <div class=" cardy bg-image bg-image-blur"></div>
+            <div class="cardy cardy-absolute">
+              <img src="assets/img/logo.png" alt="" width="100%">
+              <h5 class="heading text-primary text-center">SIGN IN</h5>
+              <br>
+              <div class="">
+                <form class="form-dark-con login-form" action="assets/php/signin.php" method="post">
+                  <div class="form-row">
+                    <div class="form-group col-1 text-left"><i class="fa fa-user"></i></div>
+                    <div class="form-group col-11">
+                      <label>Name : </label>
+                      <input class="form-dark" type="text" name="username" value="" required>
                     </div>
-                    <div class="row">
-                      <div class="col-2 text-right">
-                        <i class="fa fa-user"></i>
-                      </div>
-                      <div class="col-8">
-                        <input type="text" name="username" value="" required placeholder="Username">
-                      </div>
+                  </div>
+                  <div class="form-row">
+                    <div class="form-group col-1 text-left">
+                      <i class="fa fa-lock"></i>
                     </div>
-                    <br>
-                    <div class="row">
-                      <div class="col-2 text-right">
-                        <i class="fa fa-lock "></i>
-                      </div>
-                      <div class="col-8">
-                        <input id="password" type="password" name="password" value="" required placeholder="Password">
-                        <i class="fa fa-eye password-btn" onclick="toggle_password()"></i>
-                      </div>
+                    <div class="form-group col-11">
+                      <label>Password : </label>
+                      <input id="password" class="form-dark" type="password" name="password" value="" required>
+                      <i class="fa fa-eye password-btn" onclick="toggle_password()"></i>
                     </div>
-                    <br>
-                    <div class="row" >
-                      <div class="col-12 text-center">
-                        <button type="submit" name="signin" class="btn btn-primary"> Sign in</button>
-                      </div>
+                  </div>
+                  <div class="form-group">
+                    <div class="col-12 text-center">
+                      <button type="submit" name="signin" class="btn btn-primary"> Sign in</button>
                     </div>
-                  </form>
-                </div>
+                  </div>
+                </form>
               </div>
             </div>
           </div>
-        </section>
+        </div>
       </div>
-    <?php include 'footer.php'; ?>
+    </section>
+  </div>
+  <?php include 'footer.php'; ?>
     <script type="text/javascript">
       document.getElementById('signin').classList.add('active2');
     </script>
@@ -103,7 +92,22 @@ if(isset($_SESSION['user_id'])){
         }
       }
     </script>
-    <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
+    <script type="text/javascript">
+     $('.form-dark').on('focusin', function() {
+     $(this).parent().find('label').addClass('active-label');});
+     $('.form-dark').on('focusout', function() {
+      if (!this.value) {
+      $(this).parent().find('label').removeClass('active-label');}});
+    </script>
+    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+    <script type="text/javascript">
+     $('.form-dark').on('focusin', function() {
+     $(this).parent().find('label').addClass('active-label');});
+     $('.form-dark').on('focusout', function() {
+      if (!this.value) {
+      $(this).parent().find('label').removeClass('active-label');}});
+    </script>
+    <!-- <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script> -->
     <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
   </body>
