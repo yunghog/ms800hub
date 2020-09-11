@@ -36,17 +36,16 @@ if(isset($_SESSION['user_id'])){
 	<body>
   <?php include 'header.php'; ?>
   <div class="content">
-    <section class="bg-image login-form-container">
+    <section class="bg-image login-form-container" data-aos="fade">
       <div class="container">
         <div class="row no-gutters justify-content-center">
           <div class="col-md-4">
             <div class=" cardy bg-image bg-image-blur"></div>
-            <div class="cardy cardy-absolute">
-              <img src="assets/img/logo.png" alt="" width="100%">
-              <h5 class="heading text-primary text-center">SIGN IN</h5>
+            <div class="cardy cardy-absolute" data-aos="zoom-out" data-aos-delay="600">
+              <img src="assets/img/logo.png" alt="" width="100%"  data-aos="zoom-out" data-aos-delay="900">
+              <h5 class="heading text-primary text-center"   data-aos="fade-up" data-aos-delay="1000" >SIGN IN</h5>
               <br>
-              <div class="">
-                <form class="form-dark-con login-form" action="assets/php/signin.php" method="post">
+                <form class="form-dark-con login-form" action="assets/php/signin.php" method="post"   data-aos="fade-up" data-aos-delay="1300">
                   <div class="form-row">
                     <div class="form-group col-1 text-left"><i class="fa fa-user"></i></div>
                     <div class="form-group col-11">
@@ -70,7 +69,6 @@ if(isset($_SESSION['user_id'])){
                     </div>
                   </div>
                 </form>
-              </div>
             </div>
           </div>
         </div>
@@ -106,6 +104,13 @@ if(isset($_SESSION['user_id'])){
      $('.form-dark').on('focusout', function() {
       if (!this.value) {
       $(this).parent().find('label').removeClass('active-label');}});
+    </script>
+    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+    <script>
+      AOS.init({
+          once: true,
+          duration: 2000,
+      });
     </script>
     <!-- <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script> -->
     <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
