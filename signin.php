@@ -65,7 +65,8 @@ if(isset($_SESSION['user_id'])){
                   </div>
                   <div class="form-group">
                     <div class="col-12 text-center">
-                      <button type="submit" name="signin" class="btn btn-primary"> Sign in</button>
+                      <button type="submit" name="signin" class="btn btn-primary btn-block"> Sign in</button>
+                      <a class="btn btn-outline-primary btn-block"> Sign Up</a>
                     </div>
                   </div>
                 </form>
