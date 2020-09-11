@@ -723,6 +723,7 @@ position: absolute;
 .gallery-card-body{
   text-align: left;
   padding: 20px;
+  padding-bottom: 0px;
 }
 @media screen and (max-width: 768px) {
   .gallery-card-image{
@@ -730,10 +731,6 @@ position: absolute;
   }
   .gallery-card-image img{
     max-height: 80vh;
-  }
-  #image{
-    max-height: 90vh;
-    width: 100%;
   }
 }
 .blog-thumb{
@@ -1111,10 +1108,10 @@ a:hover{
 .text-primary:hover a{
   background-color: #555;
 }
-::-webkit-scrollbar {
+.overlay-model::-webkit-scrollbar {
   display: none;
 }
-.example {
+.overlay-model {
   -ms-overflow-style: none;
   scrollbar-width: none;
 }

@@ -20,7 +20,7 @@ include 'assets/php/db_connect.php';
     <!-- jquery -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
     <!-- aos -->
-    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+    <link type="text/css" rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
   </head>
 	<body>
     <?php include 'header.php'; ?>
@@ -35,9 +35,15 @@ include 'assets/php/db_connect.php';
         </div>
       </div>
     </section>
-    <section data-aos="fade">
+    <br>
+    <section data-aos="fade-up">
       <div class="container">
-        <div class="row gallery no-gutters">
+        <div class="row"  data-aos="fade-up">
+          <div class="col-md-12 text-center">
+            <h3 class="heading">Gallery</h3>
+          </div>
+        </div>
+        <div class="row gallery no-gutters" data-aos="fade-up" data-aos-delay="600">
           <?php
           $gal_query="SELECT a.*, b.username from gallery a, users b where a.active=1 and a.author_id=b.id order by a.date desc ";
           // echo $gal_query;
@@ -58,7 +64,7 @@ include 'assets/php/db_connect.php';
         </div>
       </section>
       <section class="overlay-model" id="overlay-model">
-        <div class="container">
+        <div class="container-fluid">
           <div class="row justify-content-center">
             <div class="">
               <div class="" >
@@ -80,7 +86,7 @@ include 'assets/php/db_connect.php';
                     </div>
                     <div class="row">
                       <div class="col-10">
-                        <h5 class="card-title" id="caption"></h5>
+                        <h5 class="heading" id="caption"></h5>
                       </div>
                       <div class="col-2 text-right">
                         <i class="fa fa-share" onclick="openShare()"></i>
@@ -113,6 +119,7 @@ include 'assets/php/db_connect.php';
         <?php
       }
     } ?>
+    <br>
     <?php include 'footer.php'; ?>
     <script type="text/javascript">
       document.getElementById('gallery').classList.add('active2');
@@ -127,7 +134,7 @@ include 'assets/php/db_connect.php';
         document.getElementById('author').innerHTML="by "+args[1]+"  "+args[3].split('-')[1]+'/'+args[3].split('-')[2];
         document.getElementById('tag').innerHTML="<a style='font-size:12px;' href='https://instagram.com/"+args[4]+"' target='_blank'>"+args[4]+"</a>";
         document.getElementById('gid').setAttribute("value",args[5]);
-        document.getElementById('dlLink').setAttribute("href",image_src);
+        // document.getElementById('dlLink').setAttribute("href",image_src);
       }
       function closeGalleryModel() {
         document.getElementById('overlay-model').style.display='none';
