@@ -734,6 +734,7 @@ position: absolute;
   }
   .gallery-card-image img{
     max-height: 80vh;
+    max-width: 100%;
   }
 }
 .blog-thumb{
