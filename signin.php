@@ -99,14 +99,6 @@ if(isset($_SESSION['user_id'])){
       $(this).parent().find('label').removeClass('active-label');}});
     </script>
     <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
-    <script type="text/javascript">
-     $('.form-dark').on('focusin', function() {
-     $(this).parent().find('label').addClass('active-label');});
-     $('.form-dark').on('focusout', function() {
-      if (!this.value) {
-      $(this).parent().find('label').removeClass('active-label');}});
-    </script>
-    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
     <script>
       AOS.init({
           once: true,

@@ -458,11 +458,12 @@ position: absolute;
   font-size: 20px;
 }
 .signup-form{
-  height: auto;
-  font-family: "Lexend Deca";
-  width: 100%;
-  text-align: center;
-  background-color: rgba(0, 0, 0, 0.5) !important;
+  height: 700px;
+}
+.alert-dark {
+    background-color: #222222;
+    color: #eee;
+    border-color: #555555;
 }
 .form-control2{
   border: 0px;
