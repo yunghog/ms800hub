@@ -13,8 +13,6 @@ include 'assets/php/db_connect.php';
     <meta name="author" content="Samartha">
     <meta name="description" content="ClubMS8 is a group of auto-mototive enthusiast in the town of sagar. To be specific, we are the group of proud MS800 owners.">
     <!-- fonts -->
-    <link href="https://fonts.googleapis.com/css?family=Monoton&display=swap" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css?family=Lexend+Deca&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="assets/css/bootstrap.min.css">
@@ -24,7 +22,6 @@ include 'assets/php/db_connect.php';
     <div id="fb-root"></div>
     <script async defer crossorigin="anonymous" src="https://connect.facebook.net/en_GB/sdk.js#xfbml=1&version=v7.0&appId=877989645977649&autoLogAppEvents=1"></script>
     <?php include 'header.php'; ?>
-<br>
   <div class="content">
         <section class="full-section"  id="fade">
           <div class="container">
