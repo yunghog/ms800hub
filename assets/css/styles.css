@@ -1091,9 +1091,13 @@ a:hover{
 }
 .dark-card-img{
   width: 100%;
-  border-radius: 20px;
+  border-top-left-radius: 20px;
+  border-top-right-radius: 20px;
   max-height: 400px;
   overflow: hidden;
+}
+.dark-card .lim-h-150{
+  max-height: 150px !important;
 }
 .dark-card-img img{
   width: 100%;
@@ -1103,6 +1107,9 @@ a:hover{
 }
 .dark-card-body h5{
   font-family: 'akira';
+}
+.dark-card-body p{
+  line-height: 1;
 }
 .dark-card-body .link a{
   padding: 5px;
