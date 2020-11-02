@@ -35,7 +35,7 @@ include 'assets/php/db_connect.php';
       </section>
       <br>
       <section>
-        <div class="container" id="">
+        <div class="container" id="main-blog-con">
           <div class="row">
             <?php
             $main_query="SELECT a.*, b.name, b.username from blog a, users b where a.active=1 and a.author_id=b.id order by a.date limit 1";
