@@ -842,7 +842,9 @@ position: absolute;
   color: #fff;
 }
 
-.blog-image-full{
+.blog-image-full img{
+height: 400px !important;
+/* max-width: 100%; */
 
 }
 .modal-body{
