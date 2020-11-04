@@ -159,9 +159,6 @@ include 'assets/php/db_connect.php';
                         <i class="fa fa-whatsapp" onclick="share('whatsapp')"></i>
                         <i class="fa fa-link" onclick="share('link')"></i>
                       </div>
-                      <div class="like-button">
-                        <div class="fb-like" data-href="http://www.ms800hub.rf.gd/blog.php?bid=<?php echo $id ; ?>" data-width="" data-layout="button_count" data-action="like" data-size="small" data-share="false"></div>
-                      </div>
                       <img id="blog-image-full" src="assets/img/blog/<?php echo $blog_rows['image']; ?>" alt="ms800hub.rf.gd">
                     </div>
                   </div>
