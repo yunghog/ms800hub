@@ -20,11 +20,6 @@ include 'db_connect.php';
       if(in_array($file_ext,$extensions)=== false){
          $errors[]="extension not allowed, please choose a JPEG or PNG file.";
       }
-
-      if($file_size > 2097152){
-         $errors[]='File size must be excately 2 MB';
-      }
-
       if(empty($errors)==true){
          move_uploaded_file($file_tmp,"../img/blog/"."blog_image_".$user_id.$file_name);
          $target="blog_image_".$user_id.$file_name;
@@ -35,11 +30,6 @@ include 'db_connect.php';
          $target2="gal_image_".$user_id.$file_name;
          $query2="INSERT INTO `gallery`(`image`, `author_id`, `caption`,`date`, `tag`) VALUES ('$target2','$user_id','$title','$today','$tag')";
          $exec2=mysqli_query($conn,$query2);
-         ?>
-         <script type="text/javascript">
-           alert('Uploaded successfully');
-         </script>
-         <?php
       }else{
          ?>
           <script type="text/javascript">
@@ -50,5 +40,6 @@ include 'db_connect.php';
    }
 ?>
 <script type="text/javascript">
-  window.location.href='../../admin/blog.php';
+  alert('Uploaded successfully');
+  // window.location.href='../../admin/blog.php';
 </script>
