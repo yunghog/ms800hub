@@ -27,8 +27,8 @@ include 'assets/php/db_connect.php';
         <div class="container hero-con">
           <div class="row" data-aos="fade-right">
             <div class="col-md-12">
-              <h1 class="big-text">BLOG</h1>
-              <h4 class="tag">If speed costs, how fast you wanna go?</h4>
+              <h1 class="big-text" id="title">BLOG</h1>
+              <h4 class="tag" id="sub-title">If speed costs, how fast you wanna go?</h4>
             </div>
           </div>
         </div>
@@ -37,8 +37,13 @@ include 'assets/php/db_connect.php';
       <section>
         <div class="container" id="main-blog-con">
           <div class="row">
+            <div class="col-md-12 text-center">
+              <h3 class="big-text">Recent posts</h3>
+            </div>
+          </div>
+          <div class="row">
             <?php
-            $main_query="SELECT a.*, b.name, b.username from blog a, users b where a.active=1 and a.author_id=b.id order by a.date limit 1";
+            $main_query="SELECT a.*, b.name, b.username from blog a, users b where a.active=1 and a.author_id=b.id order by a.date desc limit 1";
             $main_exec=mysqli_query($conn,$main_query);
             while($main_rows=mysqli_fetch_array($main_exec)){
               ?>
@@ -64,7 +69,7 @@ include 'assets/php/db_connect.php';
               <div class="col-md-3">
                 <div class="row">
                   <?php
-                  $main_query2="SELECT a.*, b.name, b.username from blog a, users b where a.id != '$main_blog_id' and a.active=1 and a.author_id=b.id order by a.date limit 2";
+                  $main_query2="SELECT a.*, b.name, b.username from blog a, users b where a.id != '$main_blog_id' and a.active=1 and a.author_id=b.id order by a.date desc limit 2";
                   $main_exec2=mysqli_query($conn,$main_query2);
                   while($main_rows2=mysqli_fetch_array($main_exec2)){
                     ?>
@@ -76,7 +81,7 @@ include 'assets/php/db_connect.php';
                       <div class="dark-card-body">
                       <div class="row">
                         <div class="col-8">
-                          <h5><?php echo $main_rows2['title'];?></h5>
+                          <p><?php echo $main_rows2['title'];?></p>
                         </div>
                         <div class="col-4 text-right">
                           <a href="blog.php?bid=<?php echo $main_rows2["id"] ?>" class="btn btn-primary">more</a>
@@ -92,11 +97,17 @@ include 'assets/php/db_connect.php';
             </div>
           </div>
         </section>
+        <br>
       <section>
         <div class="container" id="blog_thumb_cont">
           <div class="row">
+            <div class="col-md-12 text-center">
+              <h3 class="big-text">All posts</h3>
+            </div>
+          </div>
+          <div class="row">
             <?php
-            $gal_query="SELECT a.*, b.name, b.username from blog a, users b where a.active=1 and a.author_id=b.id order by a.date";
+            $gal_query="SELECT a.*, b.name, b.username from blog a, users b where a.active=1 and a.author_id=b.id order by a.date desc";
             $gal_exec=mysqli_query($conn,$gal_query);
             while($gal_rows=mysqli_fetch_array($gal_exec)){
               ?>
@@ -111,7 +122,7 @@ include 'assets/php/db_connect.php';
                     <div class="col-7">
                       <div class="blog-desc">
                         <h5><?php echo $gal_rows['title']; ?></h5>
-                        <p>by <?php echo $gal_rows['name']; ?> <br> pc : <?php echo $gal_rows['tag']; ?><br> <?php echo $gal_rows['date']; ?> </p>
+                        <p><?php echo $gal_rows['date']; ?> </p>
                       </div>
                     </div>
                   </div>
@@ -129,13 +140,17 @@ include 'assets/php/db_connect.php';
           while ($blog_rows=mysqli_fetch_array($blog_exec)) {
             ?>
             <script type="text/javascript">
+              document.getElementById('hero').style.backgroundImage="url(assets/img/blog/<?php echo $blog_rows['image']; ?>)"
+              document.getElementById('title').style.fontSize="30px";
+              document.getElementById('title').innerHTML="<?php echo $blog_rows['title']; ?>";
+              document.getElementById('sub-title').innerHTML="";
               document.getElementById('main-blog-con').style.display="none";
               document.getElementById('blog_thumb_cont').style.display="none";
             </script>
             <div class="container">
               <div class="blog-full">
-                <div class="row no-gutters">
-                  <div class="col-md-12 text-center">
+                <div class="row no-gutters justify-content-center">
+                  <div class="col-md-10 text-center">
                     <div class="blog-image-full" >
                       <button class="btn btn-primary back-button" type="button" name="back-button" onclick="goBackBlog()"> <i class="fa fa-arrow-left"></i></button>
                       <button class="btn btn-primary share-button" type="button" name="share-button" onclick="openShare()"> <i class="fa fa-share"></i></button>
@@ -151,8 +166,8 @@ include 'assets/php/db_connect.php';
                     </div>
                   </div>
                 </div>
-                <div class="row">
-                  <div class="col-md-12">
+                <div class="row justify-content-center">
+                  <div class="col-md-10">
                     <div class="blog-desc-full" id="blog-desc-full">
                       <div class="row">
                         <div class="col-12 text-right">
