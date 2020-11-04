@@ -48,9 +48,10 @@ header{
 }
 .bg-image{
   margin: 0px;
+  background-position: center;
   background-blend-mode: soft-light;
   background-attachment: fixed;
-  background-size: 100%;
+  background-size: cover;
 	background-repeat: no-repeat;
 	background-color: #000a !important;
   background-image: url("../img/bg.jpg");
@@ -739,18 +740,22 @@ position: absolute;
   }
 }
 .blog-thumb{
+  margin: 10px;
   background-color: rgba(0,0,0,.6);
   cursor: pointer;
   width: 100%;
   height: 150px;
-  border-radius: 10px;
-  border: 1px solid #00e4ff;
+  border-radius: 20px;
+  border: 1px solid #555;
+  overflow: hidden;
 }
 .blog-image{
   min-width: 10%;
   height: 148px;
   overflow: hidden;
-  border-radius: 10px;
+}
+.blog-full{
+  margin-top: -40vh;
 }
 .blog-desc{
   padding: 10px;
