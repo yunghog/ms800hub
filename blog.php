@@ -152,13 +152,6 @@ include 'assets/php/db_connect.php';
                 <div class="row no-gutters justify-content-center">
                   <div class="col-md-10 text-center">
                     <div class="blog-image-full" >
-                      <button class="btn btn-primary back-button" type="button" name="back-button" onclick="goBackBlog()"> <i class="fa fa-arrow-left"></i></button>
-                      <button class="btn btn-primary share-button" type="button" name="share-button" onclick="openShare()"> <i class="fa fa-share"></i></button>
-                      <div class="share-panel" id="share-panel">
-                        <i class="fa fa-facebook" onclick="share('facebook')"></i>
-                        <i class="fa fa-whatsapp" onclick="share('whatsapp')"></i>
-                        <i class="fa fa-link" onclick="share('link')"></i>
-                      </div>
                       <img id="blog-image-full" src="assets/img/blog/<?php echo $blog_rows['image']; ?>" alt="ms800hub.rf.gd">
                     </div>
                   </div>
@@ -167,13 +160,21 @@ include 'assets/php/db_connect.php';
                   <div class="col-md-10">
                     <div class="blog-desc-full" id="blog-desc-full">
                       <div class="row">
-                        <div class="col-12 text-right">
+                        <div class="col-12">
                           <h3><?php echo $blog_rows['title'] ?></h3>
                           <small class="text-primary">by <?php echo $blog_rows['name']; ?> | pc : <a target="_blank" href="https://instagram.com/<?php echo $blog_rows['tag']; ?>"><?php echo $blog_rows['tag']; ?></a> | <?php for ($i=5; $i <=9 ; $i++) {
                             echo $blog_rows['date'][$i];
                           } ?></small>
                           <br>
                           <p class="text-justify"><?php echo $blog_rows['body']; ?></p>
+                          <button class="btn btn-primary back-button" type="button" name="back-button" onclick="goBackBlog()"> <i class="fa fa-arrow-left"></i></button>
+                            <button class="btn btn-primary share-button" type="button" name="share-button" onclick="openShare()"> <i class="fa fa-share"></i></button>
+                              <span class="share-panel" id="share-panel">
+                                <i class="fa fa-facebook" onclick="share('facebook')"></i>
+                                <i class="fa fa-whatsapp" onclick="share('whatsapp')"></i>
+                                <i class="fa fa-link" onclick="share('link')"></i>
+                              </span>
+
                         </div>
                       </div>
                     </div>

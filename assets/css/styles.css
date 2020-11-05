@@ -778,33 +778,25 @@ position: absolute;
   background-color: #00e4ff;
 }
 .blog-full .back-button{
-  position: absolute;
-  padding: 0px;
+  padding: 0px 10px;
   font-size: 18px;
-  top: 10px;
-  left: 10px;
-  opacity: .6;
 }
 .share-button{
-  position: absolute;
-  padding: 0px;
+  padding: 0px 10px;
   font-size: 18px;
-  top: 10px;
-  opacity: .6;
-  right: 10px;
 }
 .share-panel{
   overflow: hidden;
   transition: .5s ease;
-  height: 0px;
-  opacity: 0;
-  visibility: hidden;
-  position: absolute;
+  opacity: 1;
+  /* visibility: hidden; */
   background-color: rgba(0, 0, 0, 0.7);
-  border: 1px solid #00e4ff;
+  /* border: 1px solid #00e4ff; */
   padding: 10px;
   border-radius: 10px;
   margin: 20px;
+  margin-top: 30px;
+  /* width: 0px; */
 }
 .share-panel-2{
   right: 0;
@@ -813,10 +805,7 @@ position: absolute;
 .share-panel::before{
   visibility: visible;
   font-family: "FontAwesome";
-  content: "\f0d8";
-  position: absolute;
-  top: -22px;
-  right: 20px;
+  content: "\f0d9";
   font-size: 22px;
   color: #00e4ff;
 }
