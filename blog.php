@@ -128,7 +128,6 @@ include 'assets/php/db_connect.php';
                   </div>
                 </div>
               </div><br> <?php } ?>
-
             </div>
           </div>
         </section>
