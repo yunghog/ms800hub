@@ -200,13 +200,13 @@ include 'assets/php/db_connect.php';
           function openShare(){
             var sharepanel=document.getElementById('share-panel');
             if(sharepanel.style.visibility=="visible"){
-              sharepanel.style.height="0px";
+              sharepanel.style.width="0px";
               sharepanel.style.opacity="0";
               sharepanel.style.visibility="hidden";
             }
             else{
+              sharepanel.style.width="60px";
               sharepanel.style.visibility="visible";
-              sharepanel.style.height="35px";
               sharepanel.style.opacity="1";
             }
           }

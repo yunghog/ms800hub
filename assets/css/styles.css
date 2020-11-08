@@ -789,25 +789,13 @@ position: absolute;
   overflow: hidden;
   transition: .5s ease;
   opacity: 1;
-  /* visibility: hidden; */
-  background-color: rgba(0, 0, 0, 0.7);
-  /* border: 1px solid #00e4ff; */
+  visibility: hidden;
   padding: 10px;
-  border-radius: 10px;
-  margin: 20px;
-  margin-top: 30px;
-  /* width: 0px; */
+  width: 0px;
 }
 .share-panel-2{
   right: 0;
   top: 0 !important;
-}
-.share-panel::before{
-  visibility: visible;
-  font-family: "FontAwesome";
-  content: "\f0d9";
-  font-size: 22px;
-  color: #00e4ff;
 }
 .like-button{
   position: absolute;
