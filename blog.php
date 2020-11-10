@@ -19,8 +19,6 @@ include 'assets/php/db_connect.php';
     <link rel="stylesheet" type="text/css" href="assets/css/styles.css">
   </head>
 	<body>
-    <div id="fb-root"></div>
-    <script async defer crossorigin="anonymous" src="https://connect.facebook.net/en_GB/sdk.js#xfbml=1&version=v7.0&appId=877989645977649&autoLogAppEvents=1"></script>
     <div class="content">
       <?php include 'header.php'; ?>
       <section  id="hero" class="full-page-section bg-image"  data-aos="fade">
