@@ -45,10 +45,6 @@ CREATE TABLE IF NOT EXISTS `gallery` (
 -- Dumping data for table `gallery`
 --
 
-INSERT INTO `gallery` (`id`, `image`, `author_id`, `caption`, `date`, `tag`, `active`) VALUES
-(1, 'gal_image_11589563187.jpg', 1, 'illustration by akshay kumar', '2015-05-20', 'akshay.kumar.3939', 1),
-(2, 'gal_image_11589611571.jpg', 1, 'jai shri ram', '2016-05-20', 'sam', 1);
-
 -- --------------------------------------------------------
 
 --
@@ -98,10 +94,6 @@ CREATE TABLE IF NOT EXISTS `users` (
 -- Dumping data for table `users`
 --
 
-INSERT INTO `users` (`id`, `name`, `username`, `password`, `role`, `phno`, `email`, `veh_id`, `model`, `place`, `active`) VALUES
-(1, 'Samartha', 'yungh', 'yungh44', 1, 8904460742, 'samarthahm@gmail.com', 'KA15M3435', '800 dx', 'sagar', 1),
-(2, 'Sadeep', 'sady', 'sady99', 2, 8310001420, 'sadeep@gmail.com', 'xxxxxxxxx', '800 ac', 'sagar', 1),
-(7, 'test user', 'user', 'user', 3, 9, 'x', 'x', 'x', 'x', 1);
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
