@@ -30,7 +30,7 @@ if (isset($_SESSION['user_id'])){
         <link rel="stylesheet" href="../assets/css/bootstrap.min.css">
         <link rel="stylesheet" type="text/css" href="../assets/css/styles.css">
       </head>
-    	<body background="../assets/img/bg.jpg">
+    	<body class="bg-image">
         <?php include 'header.php'; ?>
         <br>
         <div class="content" id="fade">
