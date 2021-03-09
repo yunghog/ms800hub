@@ -1,4 +1,4 @@
-<header>
+<header id="myHeader" style="position:relative">
   <div class="menu-bar">
     <div class="container-fluid">
       <div class="row">
