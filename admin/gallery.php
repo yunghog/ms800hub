@@ -37,7 +37,7 @@ if (isset($_SESSION['user_id'])){
         <script src="https://cdnjs.cloudflare.com/ajax/libs/ekko-lightbox/5.3.0/ekko-lightbox.min.js" integrity="sha512-Y2IiVZeaBwXG1wSV7f13plqlmFOx8MdjuHyYFVoYzhyRr3nH/NMDjTBSswijzADdNzMyWNetbLMfOpIPl6Cv9g==" crossorigin="anonymous"></script>
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/ekko-lightbox/5.3.0/ekko-lightbox.css" integrity="sha512-Velp0ebMKjcd9RiCoaHhLXkR1sFoCCWXNp6w4zj1hfMifYB5441C+sKeBl/T/Ka6NjBiRfBBQRaQq65ekYz3UQ==" crossorigin="anonymous" />
       </head>
-    	<body background="../assets/img/bg.jpg">
+    	<body class="bg-image">
         <?php include 'header.php'; ?>
         <br>
         <div class="content" id="fade">
@@ -48,7 +48,8 @@ if (isset($_SESSION['user_id'])){
                 <h3 class="tag">Welcome Admin : <?php echo $username; ?></h3>
               </div>
               <div class="col-md-2">
-                <a href="#post_form" class="btn btn-primary">Upload</a>
+                <!-- <a href="#post_form" class="btn btn-primary">Upload</a> -->
+                <button type="button" data-toggle="modal" class="btn btn-primary" data-target="#exampleModal" name="button">fafa</button>
               </div>
             </div>
             <br>
@@ -168,6 +169,53 @@ if (isset($_SESSION['user_id'])){
             </div>
           </div>
         <br><br>
+        <!-- Modal -->
+        <!-- Modal -->
+        <div class="modal fade" id="exampleModalLong" tabindex="-1" role="dialog" aria-labelledby="exampleModalLongTitle" aria-hidden="true">
+          <div class="modal-dialog" role="document">
+            <div class="modal-content">
+              <div class="modal-header">
+                <h5 class="modal-title" id="exampleModalLongTitle">Modal title</h5>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                  <span aria-hidden="true">&times;</span>
+                </button>
+              </div>
+              <div class="modal-body">
+                <div class="row" >
+                  <div class="col-md-12">
+                    <form class="form-control2" action="../assets/php/gallery_post.php" method="post" enctype="multipart/form-data">
+                      <div class="row">
+                        <div class="col-12">
+                          <input type="file" name="image" value="" placeholder="Select Image">
+                        </div>
+                      </div>
+                      <br>
+                      <div class="row">
+                        <div class="col-12">
+                          <textarea name="caption" rows="3"  placeholder="Caption!!!"></textarea>
+                        </div>
+                      </div>
+                      <br>
+                      <div class="row">
+                        <div class="col-9">
+                          <input type="text" name="tag" value="" placeholder="tag">
+                        </div>
+                        <div class="col-3 text-center">
+                          <button type="submit" name="post_gallery" class="btn btn-primary">Post</button>
+                        </div>
+                      </div>
+                      <br>
+                    </form>
+                  </div>
+                </div>
+              </div>
+              <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                <button type="button" class="btn btn-primary">Save changes</button>
+              </div>
+            </div>
+          </div>
+        </div>
         <?php include 'footer.php'; ?>
         <script type="text/javascript">
           document.getElementById('index').classList.add('active2');
